@@ -1,0 +1,22 @@
+@using Sitecore.Foundation.Grid.Extensions
+@using Sitecore.Foundation.Grid.Models
+@using Sitecore.Feature.Blocks
+@using Sitecore.Feature.Blocks.Models
+@using Sitecore.Foundation.Alerts.Extensions
+@using Sitecore.Foundation.Models.Extensions
+@using Glass.Mapper.Sc.Web.Mvc
+@inherits GlassView<IText>
+
+@{
+    var parameters = GetRenderingParameters<IRenderingParameters_Spacing>();
+}
+
+@if (!Model.IsDerived(Templates.Text.ID))
+{
+    @Html.ShowRenderingAlert("Text")
+    return;
+}
+
+<div class="@Html.SpacingClasses(parameters)">
+    @Editable(u => u.TextContent)
+</div>

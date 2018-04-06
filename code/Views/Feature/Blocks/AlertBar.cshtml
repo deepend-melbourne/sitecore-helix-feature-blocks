@@ -1,0 +1,31 @@
+@using Sitecore.Mvc.Presentation
+@using Sitecore.Feature.Blocks.Models
+@using Sitecore.Foundation.Grid.Extensions
+@inherits Glass.Mapper.Sc.Web.Mvc.GlassView<RenderingModel>
+
+@{
+    var parameters = GetRenderingParameters<IRenderingParameters_AlertBar>();
+}
+
+<div class="@Html.SpacingClasses(parameters)">
+    <div class="alert-bar">
+        <div class="row">
+            <div class="column small-12">
+                <div class="alert-bar__inner">
+                    <p class="alert-bar__heading">
+                        Important News
+                    </p>
+                    <p class="alert-bar__title">
+                        Travel alert for USA
+                    </p>
+                    <p class="alert-bar__content">
+                        In publishing and graphic design, lorem ipsum is a filler text or greeking commonly used to demonstrate the textual elements of a graphic document or visual presentation. When the going gets weird, the weird turn pro.
+                    </p>
+                    <a class="alert-bar__link" href="#">
+                        Read more
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

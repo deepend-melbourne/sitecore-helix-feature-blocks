@@ -1,0 +1,16 @@
+@using Sitecore.Foundation.Grid.Extensions
+@using Sitecore.Feature.Blocks.Models
+@using Sitecore.Foundation.Grid.Models
+@inherits Glass.Mapper.Sc.Web.Mvc.GlassView<IIntroduction>
+
+@{
+    var parameters = GetRenderingParameters<IRenderingParameters_Spacing>();
+}
+
+<div class="@Html.SpacingClasses(parameters)">
+    <div class="introduction">
+        <div class="introduction__text">
+            @Editable(u => u.IntroductionContent)
+        </div>
+    </div>
+</div>

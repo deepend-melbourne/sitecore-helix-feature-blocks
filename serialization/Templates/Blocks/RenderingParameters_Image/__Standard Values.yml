@@ -1,0 +1,20 @@
+﻿---
+ID: "99a9570d-6b21-4e8f-99c8-14c828c1761f"
+Parent: "f965ec29-9526-4907-82ef-c71959ea9260"
+Template: "f965ec29-9526-4907-82ef-c71959ea9260"
+Path: /sitecore/templates/Feature/Blocks/RenderingParameters_Image/__Standard Values
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20180313T043741Z
+    - ID: "4c27f1ec-5733-47da-9548-e45c19cb2f70"
+      Hint: MarginBottom
+      Value: "{6D55695E-F95A-4A92-8E90-1278DE8BBC28}"
+    - ID: "8c21720d-2e58-427d-acdc-bb61bd61044c"
+      Hint: MarginTop
+      Value: "{6D55695E-F95A-4A92-8E90-1278DE8BBC28}"

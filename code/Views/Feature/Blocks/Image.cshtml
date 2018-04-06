@@ -1,0 +1,18 @@
+@using Sitecore.Foundation.Grid.Extensions
+@using Sitecore.Feature.Blocks.Models
+@inherits Glass.Mapper.Sc.Web.Mvc.GlassView<Sitecore.Feature.Blocks.Models.IImage>
+
+@{
+    var parameters = GetRenderingParameters<IRenderingParameters_Image>();
+    var responsiveClass = parameters != null && parameters.ImageResponsive ? "image--responsive" : "";
+
+    if (Model?.ImageSource == null)
+    {
+        responsiveClass = ""; // stop responsive class getting applied to Sitecore element
+    }
+
+}
+
+<div class="@Html.SpacingClasses(parameters)">
+    @Editable(u => u.ImageSource, new { @class = responsiveClass })
+</div>

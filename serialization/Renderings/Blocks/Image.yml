@@ -1,0 +1,34 @@
+﻿---
+ID: "9e169bcf-edd3-4954-9228-fff4d43a3ad9"
+Parent: "797a73b5-84cf-4ca8-8501-d7e2a74ce8fe"
+Template: "99f8905d-4a87-4eb8-9f8b-a9bebfb3add6"
+Path: /sitecore/layout/Renderings/Feature/Blocks/Image
+DB: master
+SharedFields:
+- ID: "51b435bc-f7b9-478a-9c51-52916af96ff5"
+  Hint: Path
+  Value: ~/Views/Feature/Blocks/Image.cshtml
+- ID: "7d24e54f-5c16-4314-90c9-6051aa1a7da1"
+  Hint: Parameters Template
+  Value: "{F965EC29-9526-4907-82EF-C71959EA9260}"
+- ID: "989631c3-8cd3-4d04-a996-7c1f4eec75a4"
+  Hint: Default Parameters
+  Value: 
+- ID: "b5b27af1-25ef-405c-87ce-369b3a004016"
+  Hint: Datasource Location
+  Value: "site:image"
+- ID: "ef7c5528-7307-4e19-863b-da19eed6a9ed"
+  Hint: Open Properties after Add
+  Value: 0
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "1c307764-806c-42f0-b7ce-fc173ac8372b"
+      Hint: Supports Local Datasource
+      Type: Checkbox
+      Value: 1
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20180302T052315Z

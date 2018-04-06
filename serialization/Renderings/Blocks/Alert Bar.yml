@@ -1,0 +1,24 @@
+﻿---
+ID: "efcaa850-da51-4c36-bfe6-827392667cd4"
+Parent: "797a73b5-84cf-4ca8-8501-d7e2a74ce8fe"
+Template: "99f8905d-4a87-4eb8-9f8b-a9bebfb3add6"
+Path: /sitecore/layout/Renderings/Feature/Blocks/Alert Bar
+DB: master
+SharedFields:
+- ID: "51b435bc-f7b9-478a-9c51-52916af96ff5"
+  Hint: Path
+  Value: ~/Views/Feature/Blocks/AlertBar.cshtml
+- ID: "7d24e54f-5c16-4314-90c9-6051aa1a7da1"
+  Hint: Parameters Template
+  Value: "{150B3521-5DCE-4539-9D08-45AC935A5448}"
+- ID: "989631c3-8cd3-4d04-a996-7c1f4eec75a4"
+  Hint: Default Parameters
+  Value: Test=Is%20it%20here%3F&MarginTop=None&MarginRight=None
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20180308T231937Z

@@ -1,0 +1,26 @@
+﻿---
+ID: "91d20090-df41-48d2-991d-f4d7d0e7a810"
+Parent: "d834e66d-05fc-4eb6-97af-b8e98448ec64"
+Template: "d834e66d-05fc-4eb6-97af-b8e98448ec64"
+Path: /sitecore/templates/Feature/Blocks/HtmlHeadingSizeFolder/__Standard Values
+DB: master
+SharedFields:
+- ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
+  Hint: __Icon
+  Value: applications/16x16/folder.png
+- ID: "1172f251-dad4-4efb-a329-0c63500e4f1e"
+  Hint: __Masters
+  Type: TreelistEx
+  Value: "{8E6FFEBB-ADC2-4FE5-A63F-B50F668E04FF}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20180222T011025Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\admin

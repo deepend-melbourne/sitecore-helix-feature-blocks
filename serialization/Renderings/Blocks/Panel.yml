@@ -1,0 +1,21 @@
+﻿---
+ID: "58b69277-8454-4606-9971-d54874696bd1"
+Parent: "797a73b5-84cf-4ca8-8501-d7e2a74ce8fe"
+Template: "99f8905d-4a87-4eb8-9f8b-a9bebfb3add6"
+Path: /sitecore/layout/Renderings/Feature/Blocks/Panel
+DB: master
+SharedFields:
+- ID: "51b435bc-f7b9-478a-9c51-52916af96ff5"
+  Hint: Path
+  Value: ~/Views/Feature/Blocks/Panel.cshtml
+- ID: "7d24e54f-5c16-4314-90c9-6051aa1a7da1"
+  Hint: Parameters Template
+  Value: "{87B62D68-A595-4ECF-816F-7D02807F9F24}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20180216T034047Z

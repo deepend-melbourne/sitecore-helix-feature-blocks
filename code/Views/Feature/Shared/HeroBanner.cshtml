@@ -1,0 +1,69 @@
+@using Sitecore.Feature.Blocks.ViewModels
+@model HeroBannerViewModel
+
+<div class="hero-banner <%= model.tour ? 'hero-banner--tour' : null %>" ng-herobanner>
+    <div class="hero-banner__slides">
+
+        @foreach (var slide in Model.Slides)
+        {
+            <div class="hero-banner__slide"
+                 style="background-image: url(@slide.Image);">
+                <div class="row">
+                    <div class="column small-12">
+                        <h1 class="hero-banner__title">
+                            @slide.Title
+                        </h1>
+
+                        @if (!string.IsNullOrEmpty(slide.Description))
+                        {
+                            <p class="hero-banner__description">
+                                @slide.Description
+                            </p>
+                        }
+
+                        @if (!string.IsNullOrEmpty(slide.LinkUrl))
+                        {
+                            <a class="hero-banner__link button button--arrow"
+                               href="@slide.LinkUrl">
+                                @slide.LinkTitle
+                            </a>
+                        }
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+
+    <% if(model.tour) { %>
+    <div class="hero-banner__tour">
+        <div class="hero-banner__tour__duration">
+            <span><%= model.tour.duration %></span> Day
+        </div>
+        <div class="hero-banner__tour__route">
+            <span><%= model.tour.route.start %></span>
+            to
+            <span><%= model.tour.route.end %></span>
+        </div>
+        <div class="hero-banner__tour__price">
+            <div class="hero-banner__tour__currency">
+                From
+                <span>(<%= model.tour.price.currency %>)</span>
+            </div>
+            <div class="hero-banner__tour__amount">
+                <sup><%= model.tour.price.symbol %></sup>
+                <span><%= model.tour.price.amount %></span>
+            </div>
+        </div>
+        <a class="button button--arrow"
+           href="#pricing">
+            <span>Dates & Pricing</span>
+        </a>
+        <ul class="hero-banner__tour__links">
+            <li><a class="icon-mail" href="">Mail me this<br> brochure</a></li>
+            <li><a class="icon-ask" href="">Ask us a<br> question</a></li>
+            <li><a class="icon-print" href="">Print<br> this page</a></li>
+        </ul>
+    </div>
+    <% } %>
+
+</div>

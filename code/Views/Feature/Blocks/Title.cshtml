@@ -1,0 +1,31 @@
+@using Sitecore.Foundation.Grid.Extensions
+@using Sitecore.Feature.Blocks
+@using Sitecore.Feature.Blocks.Models
+@using Sitecore.Foundation.Alerts.Extensions
+@using Sitecore.Foundation.Models.Extensions
+@using Glass.Mapper.Sc.Web.Mvc
+@inherits GlassView<ITitle>
+
+<!-- Needs to be wired up once the multi site rendering datasource solution is aded -->
+
+@{
+    var parameters = GetRenderingParameters<IRenderingParameters_Title>();
+
+    var headingSize = !string.IsNullOrEmpty(parameters?.HeadingSize) ? parameters.HeadingSize : "h1";
+    var headingStyle = !string.IsNullOrEmpty(parameters?.HeadingStyle) ? $"title--{parameters.HeadingStyle}" : "";
+
+    var underlineStyle = parameters?.TitleUnderline ?? false ? "title--underline" : "";
+    var strikeStyle = parameters?.TitleStrike ?? false ? "title--strike" : "";
+    var centerStyle = parameters?.TitleCenter ?? false ? "title--center" : "";
+    var normalFontStyle = parameters?.TitleNormalFont ?? false ? "title--normal-font" : "";
+}
+
+@if (!Model.IsDerived(Templates.Title.ID))
+{
+    @Html.ShowRenderingAlert("Title")
+    return;
+}
+
+<div class="@Html.SpacingClasses(parameters)">
+    <@headingSize class="@headingStyle @underlineStyle @strikeStyle @centerStyle @normalFontStyle">@Editable(u => u.Content)</@headingSize>
+</div>

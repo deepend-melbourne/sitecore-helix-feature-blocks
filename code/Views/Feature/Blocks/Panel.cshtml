@@ -1,0 +1,25 @@
+@using Sitecore.Foundation.Grid.Extensions
+@inherits Glass.Mapper.Sc.Web.Mvc.GlassView<Sitecore.Mvc.Presentation.RenderingModel>
+
+@{
+    var parameters = GetRenderingParameters<Sitecore.Feature.Blocks.Models.IRenderingParameters_Panel>();
+    var roundedCornersClass = parameters?.RoundedCorners ?? false ? "panel--rounded-corners" : "";
+}
+
+<div class="@Html.SpacingClasses(parameters)">
+    <div class="panel @roundedCornersClass">
+
+        @if (parameters.EnableTopPlaceholder)
+        {
+            <div class="panel__top">
+                @Html.Sitecore().DynamicPlaceholder("panel-top")
+            </div>
+        }
+
+        <div class="panel__content">
+            <!-- This place holder is purposefully name "Content" so that it uses the main Content
+                placeholder settings-->
+            @Html.Sitecore().DynamicPlaceholder("content")
+        </div>
+    </div>
+</div>
