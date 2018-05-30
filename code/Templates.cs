@@ -66,5 +66,31 @@ namespace Sitecore.Feature.Blocks
             public const string ID_String = "{2CF161B5-4090-4D93-8009-54736D54BDC5}";
             public static readonly ID ID = new ID(ID_String);
         }
+
+        public struct HeroBanner
+        {
+            public const string ID_String = "{6B014397-A75A-41D7-A09B-5AE80406B64B}";
+            public static readonly ID ID = new ID(ID_String);
+
+            public struct Fields
+            {
+                public struct Content
+                {
+                    public const string Title_String = "{310DFC2A-586A-48D0-874D-01CE6024D4B7}";
+                    public const string Subtitle_String = "{C59B9714-225E-4B06-9272-E88A122F6303}";
+                    public const string Image_String = "{8E5C0144-1FBB-4B1A-901A-9EE8DB8900AF}";
+                    public const string Video_String = "{9F829E30-31BE-4612-AE8B-C82AE485CE01}";
+                    public const string PrimaryAction_String = "{D9B717F0-4E9C-4EF6-B0AC-02FF24EE86E9}";
+                    public const string SecondaryAction_String = "{3991E59C-2CC9-4362-BCE7-52FC07A56980}";
+
+                    public static readonly ID Title = new ID(Title_String);
+                    public static readonly ID Subtitle = new ID(Subtitle_String);
+                    public static readonly ID Image = new ID(Image_String);
+                    public static readonly ID Video = new ID(Video_String);
+                    public static readonly ID PrimaryAction = new ID(PrimaryAction_String);
+                    public static readonly ID SecondaryAction = new ID(SecondaryAction_String);
+                }
+            }
+        }
     }
 }

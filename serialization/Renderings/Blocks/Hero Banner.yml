@@ -11,11 +11,18 @@ SharedFields:
 - ID: "7d24e54f-5c16-4314-90c9-6051aa1a7da1"
   Hint: Parameters Template
   Value: "{F4862D8A-EF6A-411C-AB9D-ABFE5ED83BA7}"
+- ID: "b5b27af1-25ef-405c-87ce-369b3a004016"
+  Hint: Datasource Location
+  Value: "site:HeroBanner"
 Languages:
 - Language: en
   Versions:
   - Version: 1
     Fields:
+    - ID: "1c307764-806c-42f0-b7ce-fc173ac8372b"
+      Hint: Supports Local Datasource
+      Type: Checkbox
+      Value: 1
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
       Value: 20180308T061337Z
