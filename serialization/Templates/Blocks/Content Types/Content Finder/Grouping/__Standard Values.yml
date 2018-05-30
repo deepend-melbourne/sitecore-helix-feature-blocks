@@ -1,0 +1,23 @@
+﻿---
+ID: "6fb9d581-3d87-4e6a-bcff-44b0345f4d33"
+Parent: "2cbc0f30-7bae-479b-a24a-07cde5908fc6"
+Template: "2cbc0f30-7bae-479b-a24a-07cde5908fc6"
+Path: /sitecore/templates/Feature/Blocks/Content Types/Content Finder/Grouping/__Standard Values
+DB: master
+SharedFields:
+- ID: "1172f251-dad4-4efb-a329-0c63500e4f1e"
+  Hint: __Masters
+  Type: TreelistEx
+  Value: "{7B48479C-4264-4E8B-A24B-66603C429E8B}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20180530T022649Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\admin

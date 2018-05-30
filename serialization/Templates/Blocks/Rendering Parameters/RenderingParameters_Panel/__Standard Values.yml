@@ -1,0 +1,18 @@
+﻿---
+ID: "d99c538c-e95d-4027-a829-da9cf600ed6c"
+Parent: "87b62d68-a595-4ecf-816f-7d02807f9f24"
+Template: "87b62d68-a595-4ecf-816f-7d02807f9f24"
+Path: /sitecore/templates/Feature/Blocks/Rendering Parameters/RenderingParameters_Panel/__Standard Values
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20180220T030237Z
+    - ID: "ccf38cdd-904d-4f91-bf60-53014633f788"
+      Hint: RoundedCorners
+      Type: Checkbox
+      Value: 1

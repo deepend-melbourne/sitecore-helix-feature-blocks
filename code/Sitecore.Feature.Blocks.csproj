@@ -45,6 +45,7 @@
     <Compile Include="Models\IText.cs" />
     <Compile Include="Models\IHeroBanner.cs" />
     <Compile Include="Models\IAccordion.cs" />
+    <Compile Include="Models\IContentFinder.cs" />
     <Compile Include="Models\IVideo.cs" />
     <Compile Include="Models\ITitle.cs" />
     <Compile Include="Templates.cs" />

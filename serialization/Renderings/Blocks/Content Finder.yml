@@ -1,0 +1,25 @@
+﻿---
+ID: "dfd2dc82-7d35-46ec-b846-552c7e2a38df"
+Parent: "797a73b5-84cf-4ca8-8501-d7e2a74ce8fe"
+Template: "99f8905d-4a87-4eb8-9f8b-a9bebfb3add6"
+Path: /sitecore/layout/Renderings/Feature/Blocks/Content Finder
+DB: master
+SharedFields:
+- ID: "51b435bc-f7b9-478a-9c51-52916af96ff5"
+  Hint: Path
+  Value: ~/Views/Feature/Blocks/ContentFinder.cshtml
+- ID: "b5b27af1-25ef-405c-87ce-369b3a004016"
+  Hint: Datasource Location
+  Value: "site:ContentFinder"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "1c307764-806c-42f0-b7ce-fc173ac8372b"
+      Hint: Supports Local Datasource
+      Type: Checkbox
+      Value: 1
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20180530T022821Z

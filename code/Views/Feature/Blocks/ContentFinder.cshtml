@@ -1,0 +1,36 @@
+@using Sitecore.Feature.Blocks
+@using Sitecore.Feature.Blocks.Models
+@using Sitecore.Foundation.Alerts.Extensions
+@using Sitecore.Foundation.Models.Extensions
+@using Glass.Mapper.Sc.Web.Mvc
+
+@inherits GlassView<IContentFinder>
+
+@if (!Model.IsDerived(Templates.ContentFinder.ID))
+{
+    @Html.ShowRenderingAlert(nameof(Templates.ContentFinder))
+    return;
+}
+
+<div>
+    @if (Sitecore.Context.PageMode.IsExperienceEditor)
+    {
+        <span>Manage the content for this control in the Sitecore Content Editor</span>
+    }
+    As a...
+    <ul>
+        @foreach (var group in Model.Groupings)
+        {
+            <li>
+                <span>@group.Name</span><br />
+                I want to...
+                <ul>
+                @foreach (var ent in group.Targets)
+                {
+                    <li><a href="@ent.Link.Url">@ent.Name</a></li>
+                }
+                </ul>
+            </li>
+        }
+    </ul>
+</div>
