@@ -44,6 +44,7 @@
     <Compile Include="Models\IImage.cs" />
     <Compile Include="Models\IText.cs" />
     <Compile Include="Models\IHeroBanner.cs" />
+    <Compile Include="Models\IVideo.cs" />
     <Compile Include="Models\ITitle.cs" />
     <Compile Include="Templates.cs" />
     <Compile Include="ViewModels\HeroBannerViewModel.cs" />

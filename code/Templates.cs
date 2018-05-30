@@ -92,5 +92,21 @@ namespace Sitecore.Feature.Blocks
                 }
             }
         }
+
+        public struct Video
+        {
+            public const string ID_String = "{85C97A85-046E-4D78-969C-C13C2E2E3E05}";
+            public static readonly ID ID = new ID(ID_String);
+
+            public struct Fields
+            {
+                public struct Content
+                {
+                    public const string VideoUrl_String = "{C61B72BA-ED69-48B8-8AFC-8FD1CBE42F9B}";
+
+                    public static readonly ID VideoUrl = new ID(VideoUrl_String);
+                }
+            }
+        }
     }
 }
