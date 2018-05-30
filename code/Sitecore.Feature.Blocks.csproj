@@ -36,6 +36,8 @@
     <Content Include="Views\**\*.cshtml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Models\IAudio.cs" />
+    <Compile Include="Models\IResource.cs" />
     <Compile Include="Models\ICarouselSlide.cs" />
     <Compile Include="Models\IIntroduction.cs" />
     <Compile Include="Models\IRenderingParameters_AlertBar.cs" />
@@ -47,6 +49,7 @@
     <Compile Include="Models\IHeroBanner.cs" />
     <Compile Include="Models\IAccordion.cs" />
     <Compile Include="Models\IContentFinder.cs" />
+    <Compile Include="Models\IQuote.cs" />
     <Compile Include="Models\IVideo.cs" />
     <Compile Include="Models\ITitle.cs" />
     <Compile Include="Templates.cs" />

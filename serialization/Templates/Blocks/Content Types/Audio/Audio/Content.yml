@@ -1,0 +1,18 @@
+﻿---
+ID: "b87ae34d-c5aa-4c1f-a4fc-d1cbb903ab0f"
+Parent: "28d30d37-8bbe-4c08-b2cf-063923d954fe"
+Template: "e269fbb5-3750-427a-9149-7aa950b49301"
+Path: /sitecore/templates/Feature/Blocks/Content Types/Audio/Audio/Content
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20180530T044620Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\admin

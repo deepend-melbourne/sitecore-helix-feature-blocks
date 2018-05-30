@@ -1,0 +1,20 @@
+@using Sitecore.Feature.Blocks
+@using Sitecore.Feature.Blocks.Models
+@using Sitecore.Foundation.Alerts.Extensions
+@using Sitecore.Foundation.Models.Extensions
+@using Glass.Mapper.Sc.Web.Mvc
+
+@inherits GlassView<IQuote>
+
+@if (!Model.IsDerived(Templates.Quote.ID))
+{
+    @Html.ShowRenderingAlert(nameof(Templates.Quote))
+    return;
+}
+
+<div>
+    <strong>quote</strong>
+    <p><strong>Body</strong> @Editable(model => model.Body)</p>
+    <p><strong>Author</strong> @Editable(model => model.Author)</p>
+    <p><strong>Title</strong> @Editable(model => model.Title)</p>
+</div>

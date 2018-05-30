@@ -1,0 +1,20 @@
+@using Glass.Mapper.Sc.Web.Mvc
+@using Sitecore.Feature.Blocks.Models
+
+@inherits GlassView<IResource>
+
+<div style="margin-bottom: 10px">
+    <em>resource</em>
+    @if (Sitecore.Context.PageMode.IsExperienceEditor)
+    {
+        using (Html.Glass().BeginEditFrame(Model, "Edit", model => model.File))
+        {
+            <div>Edit file</div>
+        }
+    }
+    else
+    {
+    <p><strong>File</strong> @Editable(model => model.File)</p>
+    }
+    <p><strong>Title</strong> @Editable(model => model.Title)</p>
+</div>

@@ -170,5 +170,59 @@ namespace Sitecore.Feature.Blocks
                 }
             }
         }
+
+        public struct Audio
+        {
+            public const string ID_String = "{28D30D37-8BBE-4C08-B2CF-063923D954FE}";
+            public static readonly ID ID = new ID(ID_String);
+
+            public struct Fields
+            {
+                public struct Content
+                {
+                    public const string Source_String = "{7F2D4BEB-0A18-4777-A9A9-EEB13FBE5A5A}";
+
+                    public static readonly ID Source = new ID(Source_String);
+                }
+            }
+        }
+
+        public struct Quote
+        {
+            public const string ID_String = "{12EF9F67-27B1-4607-821E-4DF88BB44C8F}";
+            public static readonly ID ID = new ID(ID_String);
+
+            public struct Fields
+            {
+                public struct Content
+                {
+                    public const string Body_String = "{7897985D-84D8-4309-87AC-49C4F61A8657}";
+                    public const string Author_String = "{3BDDEA41-D182-432F-B016-1989949AE582}";
+                    public const string Title_String = "{F626E742-EA77-4D45-9A8F-84DD99F1A545}";
+
+                    public static readonly ID Body = new ID(Body_String);
+                    public static readonly ID Author = new ID(Author_String);
+                    public static readonly ID Title = new ID(Title_String);
+                }
+            }
+        }
+
+        public struct Resource
+        {
+            public const string ID_String = "{7A8689A0-F155-449F-9C39-622D4AFB880B}";
+            public static readonly ID ID = new ID(ID_String);
+
+            public struct Fields
+            {
+                public struct Content
+                {
+                    public const string File_String = "{F24561D5-7421-4407-ADC9-49197A283841}";
+                    public const string Title_String = "{F0F220CD-6365-4F35-BFFA-DA36B6A95B0C}";
+
+                    public static readonly ID File = new ID(File_String);
+                    public static readonly ID Title = new ID(Title_String);
+                }
+            }
+        }
     }
 }

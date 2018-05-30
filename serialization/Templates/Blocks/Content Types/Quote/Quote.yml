@@ -1,0 +1,18 @@
+﻿---
+ID: "12ef9f67-27b1-4607-821e-4df88bb44c8f"
+Parent: "6334d190-914b-4055-a78e-b47df8a2c8b3"
+Template: "ab86861a-6030-46c5-b394-e8f99e8b87db"
+Path: /sitecore/templates/Feature/Blocks/Content Types/Quote/Quote
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20180530T045449Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\admin

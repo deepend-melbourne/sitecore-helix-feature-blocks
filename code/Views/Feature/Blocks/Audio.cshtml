@@ -1,0 +1,25 @@
+@using Sitecore.Feature.Blocks
+@using Sitecore.Feature.Blocks.Models
+@using Sitecore.Foundation.Alerts.Extensions
+@using Sitecore.Foundation.Models.Extensions
+@using Glass.Mapper.Sc.Web.Mvc
+
+@inherits GlassView<IAudio>
+
+@if (!Model.IsDerived(Templates.Audio.ID))
+{
+    @Html.ShowRenderingAlert(nameof(Templates.Audio))
+    return;
+}
+
+<div>
+    <strong>audio</strong>
+    @if (Sitecore.Context.PageMode.IsExperienceEditor)
+    {
+        using (Html.Glass().BeginEditFrame(Model, "Edit", model => model.Source))
+        {
+            <div>Edit audio source</div>
+        }
+    }
+    <audio src="@(Model.Source?.Url)"></audio>
+</div>
