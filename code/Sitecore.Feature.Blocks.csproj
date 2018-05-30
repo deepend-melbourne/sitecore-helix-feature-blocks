@@ -36,6 +36,7 @@
     <Content Include="Views\**\*.cshtml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Models\ICarouselSlide.cs" />
     <Compile Include="Models\IIntroduction.cs" />
     <Compile Include="Models\IRenderingParameters_AlertBar.cs" />
     <Compile Include="Models\IRenderingParameters_Panel.cs" />

@@ -1,0 +1,10 @@
+@using Glass.Mapper.Sc.Web.Mvc
+@using Sitecore.Feature.Blocks.Models
+
+@inherits GlassView<ICarouselSlide>
+
+<div style="margin-bottom: 10px">
+    <em>carousel slide</em>
+    <p><strong>Image</strong> @Editable(model => model.Image)</p>
+    <p><strong>Link</strong> @Editable(model => model.Link)</p>
+</div>

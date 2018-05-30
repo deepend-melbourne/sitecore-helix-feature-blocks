@@ -152,5 +152,23 @@ namespace Sitecore.Feature.Blocks
                 }
             }
         }
+
+        public struct CarouselSlide
+        {
+            public const string ID_String = "{2F97817B-BD2F-457D-B440-0C1B096ECCD5}";
+            public static readonly ID ID = new ID(ID_String);
+
+            public struct Fields
+            {
+                public struct Content
+                {
+                    public const string Image_String = "{D81A778B-A8C5-4AFC-BD2D-178544053DB7}";
+                    public const string Link_String = "{8DC0B649-2311-4199-95E6-A675745D3961}";
+
+                    public static readonly ID Link = new ID(Link_String);
+                    public static readonly ID Image = new ID(Image_String);
+                }
+            }
+        }
     }
 }
