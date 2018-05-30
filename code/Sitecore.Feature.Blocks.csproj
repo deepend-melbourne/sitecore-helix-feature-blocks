@@ -44,6 +44,7 @@
     <Compile Include="Models\IImage.cs" />
     <Compile Include="Models\IText.cs" />
     <Compile Include="Models\IHeroBanner.cs" />
+    <Compile Include="Models\IAccordion.cs" />
     <Compile Include="Models\IVideo.cs" />
     <Compile Include="Models\ITitle.cs" />
     <Compile Include="Templates.cs" />
@@ -66,6 +67,7 @@
     <Reference Include="Sitecore.Kernel, Version=11.1.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\..\..\packages\Sitecore.Kernel.NoReferences.9.0.171219\lib\NET462\Sitecore.Kernel.dll</HintPath>
     </Reference>
+    <Reference Include="System" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\..\Foundation\Grid\code\Sitecore.Foundation.Grid.csproj">

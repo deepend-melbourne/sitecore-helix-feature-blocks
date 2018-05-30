@@ -1,0 +1,30 @@
+@using Sitecore.Feature.Blocks
+@using Sitecore.Feature.Blocks.Models
+@using Sitecore.Foundation.Alerts.Extensions
+@using Sitecore.Foundation.Models.Extensions
+@using Glass.Mapper.Sc.Web.Mvc
+
+@inherits GlassView<IAccordion>
+
+@if (!Model.IsDerived(Templates.Accordion.ID))
+{
+    @Html.ShowRenderingAlert(nameof(Templates.Video))
+    return;
+}
+
+<div>
+    @if (Sitecore.Context.PageMode.IsExperienceEditor)
+    {
+        using (Html.Glass().BeginEditFrame(Model, "Edit", model => model.Sections))
+        {
+            <div>Edit Sections</div>
+        }
+    }
+    <dl>
+        @foreach (var key in Model.Sections.Keys)
+        {
+            <dt>@key</dt>
+            <dd>@Model.Sections[key.ToString()]</dd>
+        }
+    </dl>
+</div>
