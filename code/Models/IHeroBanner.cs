@@ -1,4 +1,5 @@
 using Glass.Mapper.Sc.Configuration.Attributes;
+using Glass.Mapper.Sc.Fields;
 using Sitecore.Foundation.Models.Models.Interfaces;
 
 namespace Sitecore.Feature.Blocks.Models
@@ -13,15 +14,15 @@ namespace Sitecore.Feature.Blocks.Models
         string Subtitle { get; set; }
 
         [SitecoreField(FieldId = Templates.HeroBanner.Fields.Content.Image_String)]
-        string Image { get; set; }
+        Image Image { get; set; }
 
         [SitecoreField(FieldId = Templates.HeroBanner.Fields.Content.Video_String)]
-        string Video { get; set; }
+        Link Video { get; set; }
 
         [SitecoreField(FieldId = Templates.HeroBanner.Fields.Content.PrimaryAction_String)]
-        string PrimaryAction { get; set; }
+        Link PrimaryAction { get; set; }
 
         [SitecoreField(FieldId = Templates.HeroBanner.Fields.Content.SecondaryAction_String)]
-        string SecondaryAction { get; set; }
+        Link SecondaryAction { get; set; }
     }
 }

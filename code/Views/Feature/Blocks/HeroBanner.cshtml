@@ -3,11 +3,70 @@
 
 @inherits GlassView<IHeroBanner>
 
-<div class="hero-banner">
-    <p><strong>Title</strong> @Editable(model => model.Title)</p>
-    <p><strong>Subtitle</strong> @Editable(model => model.Subtitle)</p>
-    <p><strong>Image</strong> @Editable(model => model.Image)</p>
-    <p><strong>Video</strong> @Editable(model => model.Video)</p>
-    <p><strong>Primary action</strong> @Editable(model => model.PrimaryAction)</p>
-    <p><strong>Secondary action</strong> @Editable(model => model.SecondaryAction)</p>
-</div>
+@if (Sitecore.Context.PageMode.IsExperienceEditor)
+{
+    <fieldset>
+        <legend><strong>Hero banner details</strong></legend>
+
+        <p>This section will not be output on the public site, it is only available for content editors to edit parts of this control.</p>
+
+        @using (Html.Glass().BeginEditFrame(Model, "Edit Video", model => model.Video))
+        {
+            <text>Edit video</text>
+        }
+
+        @using (Html.Glass().BeginEditFrame(Model, "Edit Image", model => model.Image))
+        {
+            <text>Edit image</text>
+        }
+
+        @using (Html.Glass().BeginEditFrame(Model, "Edit Primary Action", model => model.PrimaryAction))
+        {
+            <text>Edit Primary Action</text>
+        }
+
+        @using (Html.Glass().BeginEditFrame(Model, "Edit Secondary Action", model => model.SecondaryAction))
+        {
+            <text>Edit Secondary Action</text>
+        }
+    </fieldset>
+}
+
+<header class="hero">
+    @if (!string.IsNullOrEmpty(Model.Title) || Sitecore.Context.PageMode.IsExperienceEditor)
+    {
+        <h1 class="hero__title">@Editable(model => model.Title)</h1>
+    }
+    @if (!string.IsNullOrEmpty(Model.Subtitle) || Sitecore.Context.PageMode.IsExperienceEditor)
+    {
+        <p class="hero__sub">@Editable(model => model.Subtitle)</p>
+    }
+    @if (Model.Video != null)
+    {
+        <div class="hero__video-link">
+            <a href="@Model.Video.Url">
+                <i class="icon-play "></i>
+            </a>
+        </div>
+    }
+	<div class="hero__ctas">
+        @if (Model.PrimaryAction != null)
+        {
+		    <a href="@Model.PrimaryAction.Url" class="button " id="">
+                <span class="button__text">@Model.PrimaryAction.Text</span>
+            </a>
+        }
+        @if (Model.SecondaryAction != null)
+        {
+		    <a href="@Model.SecondaryAction.Url" class="button " id="">
+                <span class="button__text">@Model.SecondaryAction.Text</span>
+            </a>
+        }
+	</div>
+    @if (Model.Image != null)
+    {
+        <div class="hero__cover">
+            <img src="@Model.Image.Src" class="hero__image" srcset="@Model.Image.Src?w=1000 1000w,@Model.Image.Src?w=1800 1800w,@Model.Image.Src?w=2800 2800w" alt="@Model.Image.Alt" />
+        </div>
+    }
+</header>
