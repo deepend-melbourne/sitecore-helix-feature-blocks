@@ -12,14 +12,21 @@
     return;
 }
 
-<div>
-    <strong>audio</strong>
-    @if (Sitecore.Context.PageMode.IsExperienceEditor)
-    {
-        using (Html.Glass().BeginEditFrame(Model, "Edit", model => model.Source))
+@if (Sitecore.Context.PageMode.IsExperienceEditor)
+{
+    <fieldset>
+        <legend><strong>Audio details</strong></legend>
+
+        <p>This section will not be output on the public site, it is only available for content editors to edit parts of this control.</p>
+
+        @using (Html.Glass().BeginEditFrame(Model, "Edit Audio", model => model.Source))
         {
-            <div>Edit audio source</div>
+            <text>Edit Audio</text>
         }
-    }
-    <audio src="@(Model.Source?.Url)"></audio>
-</div>
+    </fieldset>
+}
+
+@if (Model.Source != null)
+{
+    <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="@Model.Source.Url"></iframe>
+}

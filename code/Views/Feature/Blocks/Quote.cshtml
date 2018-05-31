@@ -12,9 +12,17 @@
     return;
 }
 
-<div>
-    <strong>quote</strong>
-    <p><strong>Body</strong> @Editable(model => model.Body)</p>
-    <p><strong>Author</strong> @Editable(model => model.Author)</p>
-    <p><strong>Title</strong> @Editable(model => model.Title)</p>
-</div>
+<blockquote class="quote-box">
+	<p><i class="icon-quote "></i></p>
+	<p>@Editable(model => model.Body)</p>
+	<footer class="quote-box__footer">
+		@if (!string.IsNullOrEmpty(Model.Author) || Sitecore.Context.PageMode.IsExperienceEditor)
+        {
+            <span class="quote-box__name">@Editable(model => model.Author)</span><br/>
+        }
+		@if (!string.IsNullOrEmpty(Model.Title) || Sitecore.Context.PageMode.IsExperienceEditor)
+        {
+            <span class="quote-box__title">@Editable(model => model.Title)</span>
+        }
+	</footer>
+</blockquote>

@@ -3,8 +3,25 @@
 
 @inherits GlassView<ICarouselSlide>
 
-<div style="margin-bottom: 10px">
-    <em>carousel slide</em>
-    <p><strong>Image</strong> @Editable(model => model.Image)</p>
-    <p><strong>Link</strong> @Editable(model => model.Link)</p>
-</div>
+@if (Sitecore.Context.PageMode.IsExperienceEditor)
+{
+    <fieldset>
+        <legend><strong>Carousel slide</strong></legend>
+
+        @Editable(model => model.Image)
+
+        @using (Html.Glass().BeginEditFrame(Model, "Edit Link", model => model.Link))
+        {
+            <text>Edit Link</text>
+        }
+    </fieldset>
+}
+else
+{
+    <li class="carousel__slide">
+        @if (Model.Image != null)
+        {
+            <img src="@Model.Image.Src" class="hero__image" srcset="@Model.Image.Src?w=1000 1000w,@Model.Image.Src?w=1800 1800w,@Model.Image.Src?w=2800 2800w" alt="@Model.Image.Alt" />
+        }
+    </li>
+}

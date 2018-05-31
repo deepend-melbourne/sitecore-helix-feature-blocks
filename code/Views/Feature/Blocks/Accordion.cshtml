@@ -12,19 +12,28 @@
     return;
 }
 
-<div>
-    @if (Sitecore.Context.PageMode.IsExperienceEditor)
+@if (Sitecore.Context.PageMode.IsExperienceEditor)
+{
+    <fieldset>
+        <legend><strong>Accordion details</strong></legend>
+
+        <p>This section will not be output on the public site, it is only available for content editors to edit parts of this control.</p>
+
+        @using (Html.Glass().BeginEditFrame(Model, "Edit Sections", model => model.Sections))
+        {
+            <text>Edit Sections</text>
+        }
+    </fieldset>
+}
+
+<section class="accordion" data-accordion data-allow-all-closed="true" data-multi-expand="true">
+    @foreach (var key in Model.Sections.Keys)
     {
-        using (Html.Glass().BeginEditFrame(Model, "Edit", model => model.Sections))
-        {
-            <div>Edit Sections</div>
-        }
+        <section class="accordion-item" data-accordion-item>
+            <h1 href="#" class="accordion-title">@key</h1>
+            <div class="accordion-content" data-tab-content>
+                @Model.Sections[key.ToString()]
+            </div>
+        </section>
     }
-    <dl>
-        @foreach (var key in Model.Sections.Keys)
-        {
-            <dt>@key</dt>
-            <dd>@Model.Sections[key.ToString()]</dd>
-        }
-    </dl>
-</div>
+</section>
