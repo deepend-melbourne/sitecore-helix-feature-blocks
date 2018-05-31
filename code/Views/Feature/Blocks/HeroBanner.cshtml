@@ -1,7 +1,16 @@
-@using Glass.Mapper.Sc.Web.Mvc
+@using Sitecore.Feature.Blocks
 @using Sitecore.Feature.Blocks.Models
+@using Sitecore.Foundation.Alerts.Extensions
+@using Sitecore.Foundation.Models.Extensions
+@using Glass.Mapper.Sc.Web.Mvc
 
 @inherits GlassView<IHeroBanner>
+
+@if (!Model.IsDerived(Templates.HeroBanner.ID))
+{
+    @Html.ShowRenderingAlert(nameof(Templates.HeroBanner))
+    return;
+}
 
 @if (Sitecore.Context.PageMode.IsExperienceEditor)
 {
