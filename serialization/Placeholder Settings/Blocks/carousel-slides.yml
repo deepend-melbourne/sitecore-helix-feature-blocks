@@ -1,17 +1,17 @@
 ﻿---
-ID: "19f95d02-ce53-4edc-b601-efdb2cc303e6"
-Parent: "68d43ea5-1f01-4e64-abac-4a4beee13789"
+ID: "f11d2453-afba-450e-92e8-898d026d79d7"
+Parent: "14e1dcd5-1238-414d-8d24-a7bf3538c957"
 Template: "5c547d4e-7111-4995-95b0-6b561751bf2e"
-Path: "/sitecore/layout/Placeholder Settings/Feature/Blocks/panel-top"
+Path: "/sitecore/layout/Placeholder Settings/Feature/Blocks/carousel-slides"
 DB: master
 SharedFields:
 - ID: "7256bdab-1fd2-49dd-b205-cb4873d2917c"
   Hint: Placeholder Key
-  Value: "panel-top"
+  Value: "carousel-slides"
 - ID: "e391b526-d0c5-439d-803e-17512eae6222"
   Hint: Allowed Controls
   Type: TreelistEx
-  Value: 
+  Value: "{A1AB3FF4-A470-49DB-83ED-20989B2B1AB7}"
 Languages:
 - Language: en
   Versions:
@@ -19,4 +19,4 @@ Languages:
     Fields:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
-      Value: 20180219T230243Z
+      Value: 20180530T043445Z
