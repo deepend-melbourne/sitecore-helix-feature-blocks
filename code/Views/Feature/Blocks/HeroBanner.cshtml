@@ -40,42 +40,51 @@
         }
     </fieldset>
 }
-
-<header class="hero">
-    @if (!string.IsNullOrEmpty(Model.Title) || Sitecore.Context.PageMode.IsExperienceEditor)
-    {
-        <h1 class="hero__title">@Editable(model => model.Title)</h1>
-    }
-    @if (!string.IsNullOrEmpty(Model.Subtitle) || Sitecore.Context.PageMode.IsExperienceEditor)
-    {
-        <p class="hero__sub">@Editable(model => model.Subtitle)</p>
-    }
-    @if (Model.Video != null)
-    {
-        <div class="hero__video-link">
-            <a href="@Model.Video.Url">
-                <i class="icon-play "></i>
-            </a>
+<section class="content-section">
+    <div class="page-intro image-right">
+        <div class="grid-x">
+            <div class="cell small-12 medium-6 large-7">
+                <div class="page-intro__image" style="background-color: @(Model.BackgroundColour) ">
+                    @if (Model.Image != null)
+                    {
+                        <img src="@Model.Image.Src" alt="@Model.Image.Alt">
+                    }
+                </div>
+            </div>
+            <div class="cell small-12 medium-6 large-5">
+                <div class="page-intro__text" style="background-color: @(Model.BackgroundColour)">
+                    @if (!string.IsNullOrEmpty(Model.Title) || Sitecore.Context.PageMode.IsExperienceEditor)
+                    {
+                        <h1 class="page-intro__title h2">@Model.Title</h1>
+                    }
+                    @if (!string.IsNullOrEmpty(Model.Subtitle) || Sitecore.Context.PageMode.IsExperienceEditor)
+                    {
+                        <div class="page-intro__content">
+                            @Model.Subtitle
+                        </div>
+                    }
+                    <ul class="page-intro__links">
+                        @if (Model.PrimaryAction != null)
+                        {
+                            <li class="page-intro__link">
+                                <a href="@Model.PrimaryAction.Url" class="arrow-link">
+                                    <i class="icon icon-chevron-right"></i>
+                                    @Model.PrimaryAction.Text
+                                </a>
+                            </li>
+                        }
+                        @if (Model.SecondaryAction != null)
+                        {
+                            <li class="page-intro__link">
+                                <a href="@Model.SecondaryAction.Url" class="arrow-link">
+                                    <i class="icon icon-chevron-right"></i>
+                                  @Model.SecondaryAction.Text
+                                </a>
+                            </li>
+                        }
+                    </ul>
+                </div>
+            </div>
         </div>
-    }
-	<div class="hero__ctas">
-        @if (Model.PrimaryAction != null)
-        {
-		    <a href="@Model.PrimaryAction.Url" class="button " id="">
-                <span class="button__text">@Model.PrimaryAction.Text</span>
-            </a>
-        }
-        @if (Model.SecondaryAction != null)
-        {
-		    <a href="@Model.SecondaryAction.Url" class="button " id="">
-                <span class="button__text">@Model.SecondaryAction.Text</span>
-            </a>
-        }
-	</div>
-    @if (Model.Image != null)
-    {
-        <div class="hero__cover">
-            <img src="@Model.Image.Src" class="hero__image" srcset="@Model.Image.Src?w=1000 1000w,@Model.Image.Src?w=1800 1800w,@Model.Image.Src?w=2800 2800w" alt="@Model.Image.Alt" />
-        </div>
-    }
-</header>
+    </div>
+</section>

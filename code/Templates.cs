@@ -82,13 +82,14 @@ namespace Sitecore.Feature.Blocks
                     public const string Video_String = "{9F829E30-31BE-4612-AE8B-C82AE485CE01}";
                     public const string PrimaryAction_String = "{D9B717F0-4E9C-4EF6-B0AC-02FF24EE86E9}";
                     public const string SecondaryAction_String = "{3991E59C-2CC9-4362-BCE7-52FC07A56980}";
+                    public const string BackgroundColour_String = "{4943F7E2-9711-4810-96D7-4B22E8AF8A7D}";
 
                     public static readonly ID Title = new ID(Title_String);
                     public static readonly ID Subtitle = new ID(Subtitle_String);
                     public static readonly ID Image = new ID(Image_String);
                     public static readonly ID Video = new ID(Video_String);
                     public static readonly ID PrimaryAction = new ID(PrimaryAction_String);
-                    public static readonly ID SecondaryAction = new ID(SecondaryAction_String);
+                    public static readonly ID BackgroundColour = new ID(BackgroundColour_String);
                 }
             }
         }

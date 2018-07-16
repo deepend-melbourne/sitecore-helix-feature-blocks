@@ -24,5 +24,8 @@ namespace Sitecore.Feature.Blocks.Models
 
         [SitecoreField(FieldId = Templates.HeroBanner.Fields.Content.SecondaryAction_String)]
         Link SecondaryAction { get; set; }
+
+        [SitecoreField(FieldId = Templates.HeroBanner.Fields.Content.BackgroundColour_String)]
+        string BackgroundColour { get; set; }
     }
 }
