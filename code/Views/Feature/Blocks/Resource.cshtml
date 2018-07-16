@@ -3,15 +3,16 @@
 
 @inherits GlassView<IResource>
 
-<a class="block-link" href="@(Model.File?.Src)">
-    @if (Sitecore.Context.PageMode.IsExperienceEditor)
-    {
-        using (Html.Glass().BeginEditFrame(Model, "Edit", model => model.File))
-        {
-            <div>Edit file</div>
-        }
-    }
-
+<div>
     @Editable(model => model.Title)
-    <i class="icon-download "></i>
-</a>
+    <a href="@(Model.File?.Src)">
+        @if (Sitecore.Context.PageMode.IsExperienceEditor)
+        {
+            using (Html.Glass().BeginEditFrame(Model, "Edit", model => model.File))
+            {
+                <div>Edit file</div>
+            }
+        }
+        <i class="icon-download "></i> (Download)
+    </a>
+</div>
