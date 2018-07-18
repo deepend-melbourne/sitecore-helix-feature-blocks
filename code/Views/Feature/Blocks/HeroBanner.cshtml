@@ -40,56 +40,55 @@
         }
     </fieldset>
 }
-<section class="content-section">
-    <div class="page-intro image-right">
-        <div class="grid-x">
-            <div class="cell small-12 medium-6 page-intro__image" style="background-color: @(Model.BackgroundColour)">
-                <div class="grid-x grid-padding-x">
-                    <div class="cell medium-12 large-10">
-                        @if (Model.Image != null)
-                        {
-                            <img src="@Model.Image.Src" alt="@Model.Image.Alt">
-                        }
-                    </div>
+
+<div class="page-intro image-right">
+    <div class="grid-x">
+        <div class="cell small-12 medium-6 page-intro__image" style="background-color: @(Model.BackgroundColour)">
+            <div class="grid-x grid-padding-x">
+                <div class="cell medium-12 large-10">
+                    @if (Model.Image != null)
+                    {
+                        <img src="@Model.Image.Src" alt="@Model.Image.Alt">
+                    }
                 </div>
             </div>
-            <div class="cell small-12 medium-6 page-intro__text" style="background-color: @(Model.BackgroundColour)">
-                <div class="grid-x grid-padding-x">
-                    <div class="cell medium-12 large-10">
-                        @Html.Sitecore().Placeholder("breadcrumb")
-                        @if (!string.IsNullOrEmpty(Model.Title) || Sitecore.Context.PageMode.IsExperienceEditor)
+        </div>
+        <div class="cell small-12 medium-6 page-intro__text" style="background-color: @(Model.BackgroundColour)">
+            <div class="grid-x grid-padding-x">
+                <div class="cell medium-12 large-10">
+                    @Html.Sitecore().Placeholder("breadcrumb")
+                    @if (!string.IsNullOrEmpty(Model.Title) || Sitecore.Context.PageMode.IsExperienceEditor)
+                    {
+                        <h1 class="page-intro__title h2">@Model.Title</h1>
+                    }
+                    @if (!string.IsNullOrEmpty(Model.Subtitle) || Sitecore.Context.PageMode.IsExperienceEditor)
+                    {
+                        <div class="page-intro__content">
+                            @Model.Subtitle
+                        </div>
+                    }
+                    <ul class="page-intro__links">
+                        @if (Model.PrimaryAction != null)
                         {
-                            <h1 class="page-intro__title h2">@Model.Title</h1>
+                            <li class="page-intro__link">
+                                <a href="@Model.PrimaryAction.Url" class="arrow-link">
+                                    <i class="icon icon-chevron-right"></i>
+                                    @Model.PrimaryAction.Text
+                                </a>
+                            </li>
                         }
-                        @if (!string.IsNullOrEmpty(Model.Subtitle) || Sitecore.Context.PageMode.IsExperienceEditor)
+                        @if (Model.SecondaryAction != null)
                         {
-                            <div class="page-intro__content">
-                                @Model.Subtitle
-                            </div>
+                            <li class="page-intro__link">
+                                <a href="@Model.SecondaryAction.Url" class="arrow-link">
+                                    <i class="icon icon-chevron-right"></i>
+                                    @Model.SecondaryAction.Text
+                                </a>
+                            </li>
                         }
-                        <ul class="page-intro__links">
-                            @if (Model.PrimaryAction != null)
-                            {
-                                <li class="page-intro__link">
-                                    <a href="@Model.PrimaryAction.Url" class="arrow-link">
-                                        <i class="icon icon-chevron-right"></i>
-                                        @Model.PrimaryAction.Text
-                                    </a>
-                                </li>
-                            }
-                            @if (Model.SecondaryAction != null)
-                            {
-                                <li class="page-intro__link">
-                                    <a href="@Model.SecondaryAction.Url" class="arrow-link">
-                                        <i class="icon icon-chevron-right"></i>
-                                        @Model.SecondaryAction.Text
-                                    </a>
-                                </li>
-                            }
-                        </ul>
-                    </div>
+                    </ul>
                 </div>
             </div>
         </div>
     </div>
-</section>
+</div>
