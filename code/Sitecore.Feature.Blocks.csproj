@@ -37,6 +37,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Models\IAudio.cs" />
+    <Compile Include="Models\IBannerColour.cs" />
+    <Compile Include="Models\IPageBanner.cs" />
     <Compile Include="Models\IResourceLink.cs" />
     <Compile Include="Models\IResource.cs" />
     <Compile Include="Models\ICarouselSlide.cs" />
@@ -57,6 +59,7 @@
     <Compile Include="ViewModels\HeroBannerViewModel.cs" />
     <None Include="packages.config" />
     <Content Include="Views\Feature\Blocks\ResourceLink.cshtml" />
+    <None Include="Views\Feature\Blocks\PageBanner.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Properties\" />

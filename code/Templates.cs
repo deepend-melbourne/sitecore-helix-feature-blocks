@@ -82,13 +82,43 @@ namespace Sitecore.Feature.Blocks
                     public const string Video_String = "{9F829E30-31BE-4612-AE8B-C82AE485CE01}";
                     public const string PrimaryAction_String = "{D9B717F0-4E9C-4EF6-B0AC-02FF24EE86E9}";
                     public const string SecondaryAction_String = "{3991E59C-2CC9-4362-BCE7-52FC07A56980}";
-                    public const string BackgroundColour_String = "{4943F7E2-9711-4810-96D7-4B22E8AF8A7D}";
 
                     public static readonly ID Title = new ID(Title_String);
                     public static readonly ID Subtitle = new ID(Subtitle_String);
                     public static readonly ID Image = new ID(Image_String);
                     public static readonly ID Video = new ID(Video_String);
                     public static readonly ID PrimaryAction = new ID(PrimaryAction_String);
+                }
+            }
+        }
+
+        public struct PageBanner
+        {
+            public const string ID_String = "{EA058A9F-828E-4607-868B-3D4EB78C1BC0}";
+            public static readonly ID ID = new ID(ID_String);
+
+            public struct Fields
+            {
+                public struct Content
+                {
+                    public const string Title_String = "{13CB04F0-6467-4ABD-B767-A46595714087}";
+
+                    public static readonly ID Title = new ID(Title_String);
+                }
+            }
+        }
+
+        public struct BannerColour
+        {
+            public const string ID_String = "{204FFCCF-B46B-4C3A-AE43-5BD439CAC7BA}";
+            public static readonly ID ID = new ID(ID_String);
+
+            public struct Fields
+            {
+                public struct Content
+                {
+                    public const string BackgroundColour_String = "{032FEB94-AF7B-480F-9F53-BCED7EA0CDCF}";
+
                     public static readonly ID BackgroundColour = new ID(BackgroundColour_String);
                 }
             }

@@ -1,0 +1,21 @@
+﻿---
+ID: "48769c56-53b7-453c-8df2-c3f1aab20e96"
+Parent: "ea058a9f-828e-4607-868b-3d4eb78c1bc0"
+Template: "ea058a9f-828e-4607-868b-3d4eb78c1bc0"
+Path: /sitecore/templates/Feature/Blocks/_Page Banner/__Standard Values
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "13cb04f0-6467-4abd-b767-a46595714087"
+      Hint: Title
+      Value: $name
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20180719T234304Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\admin

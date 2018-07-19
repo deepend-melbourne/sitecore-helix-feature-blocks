@@ -5,7 +5,7 @@ using Sitecore.Foundation.Models.Models.Interfaces;
 namespace Sitecore.Feature.Blocks.Models
 {
     [SitecoreType(TemplateId = Templates.HeroBanner.ID_String, AutoMap = true)]
-    public interface IHeroBanner : IBaseItem
+    public interface IHeroBanner : IBaseItem, IBannerColour
     {
         [SitecoreField(FieldId = Templates.HeroBanner.Fields.Content.Title_String)]
         string Title { get; set; }
@@ -24,8 +24,5 @@ namespace Sitecore.Feature.Blocks.Models
 
         [SitecoreField(FieldId = Templates.HeroBanner.Fields.Content.SecondaryAction_String)]
         Link SecondaryAction { get; set; }
-
-        [SitecoreField(FieldId = Templates.HeroBanner.Fields.Content.BackgroundColour_String)]
-        string BackgroundColour { get; set; }
     }
 }

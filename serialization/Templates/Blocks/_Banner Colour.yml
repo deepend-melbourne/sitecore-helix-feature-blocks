@@ -1,14 +1,9 @@
 ﻿---
-ID: "6b014397-a75a-41d7-a09b-5ae80406b64b"
+ID: "204ffccf-b46b-4c3a-ae43-5bd439cac7ba"
 Parent: "f3d7004f-cfcf-4f49-900e-bde88a59d973"
 Template: "ab86861a-6030-46c5-b394-e8f99e8b87db"
-Path: /sitecore/templates/Feature/Blocks/_Hero Banner
+Path: /sitecore/templates/Feature/Blocks/_Banner Colour
 DB: master
-SharedFields:
-- ID: "12c33f3f-86c5-43a5-aeb4-5598cec45116"
-  Hint: __Base template
-  Type: tree list
-  Value: "{204FFCCF-B46B-4C3A-AE43-5BD439CAC7BA}"
 Languages:
 - Language: en
   Versions:
@@ -16,7 +11,7 @@ Languages:
     Fields:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
-      Value: 20180530T011401Z
+      Value: 20180719T232915Z
     - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
       Hint: __Created by
       Value: |
