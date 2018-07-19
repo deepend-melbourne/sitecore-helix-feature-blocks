@@ -5,10 +5,13 @@
 
 <div class="page-intro" style="background-color: @(Model.BackgroundColour)">
     <div class="grid-x grid-padding-x align-center">
+        @Html.Sitecore().Placeholder("breadcrumb")
         <div class="cell small-12 medium-10 page-intro__text">
+            @Html.Sitecore().Placeholder("header-pre-title")
             <h1 class="page-intro__title h2">
                 @Editable(model => model.Title)
             </h1>
+            @Html.Sitecore().Placeholder("header-post-title")
         </div>
     </div>
 </div>
