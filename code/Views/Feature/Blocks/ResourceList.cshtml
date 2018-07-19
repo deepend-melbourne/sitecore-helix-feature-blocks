@@ -1,5 +1,9 @@
+@using Glass.Mapper.Sc.Web.Mvc
+@using Sitecore.Foundation.Models.Models.Interfaces
+
+@inherits GlassView<IBaseItem>
 <div class="resource-list">
-    <h2 class="h4 resource-list__heading"></h2>
+    <h2 class="h4 resource-list__heading">@Model.Module.Name Resources</h2>
     <ul>
         @Html.Sitecore().DynamicPlaceholder("resources")
     </ul>

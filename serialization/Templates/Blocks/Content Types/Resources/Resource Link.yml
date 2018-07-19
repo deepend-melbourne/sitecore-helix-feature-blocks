@@ -1,0 +1,25 @@
+﻿---
+ID: "fdcdb3df-45ac-4c38-b58d-07ff57dd9549"
+Parent: "ff333a73-3fb1-410b-837e-e2ec68151a04"
+Template: "ab86861a-6030-46c5-b394-e8f99e8b87db"
+Path: /sitecore/templates/Feature/Blocks/Content Types/Resources/Resource Link
+DB: master
+SharedFields:
+- ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
+  Hint: __Icon
+  Value: "Apps/32x32/Directions-3.png"
+- ID: "f7d48a55-2158-4f02-9356-756654404f73"
+  Hint: __Standard values
+  Value: "{2EBDD1E0-55DA-4184-9584-2B3866B047F7}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20180530T054545Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\admin

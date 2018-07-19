@@ -1,17 +1,17 @@
 @using Glass.Mapper.Sc.Web.Mvc
 @using Sitecore.Feature.Blocks.Models
 
-@inherits GlassView<IResource>
+@inherits GlassView<IResourceLink>
 <li>
-    <a href="@(Model.File?.Src)" target="_blank">
+    <a href="@(Model.Link?.Url)" target="_blank">
         @if (Sitecore.Context.PageMode.IsExperienceEditor)
         {
-            using (Html.Glass().BeginEditFrame(Model, "Edit", model => model.File))
+            using (Html.Glass().BeginEditFrame(Model, "Edit", model => model.Link))
             {
                 <div>Edit file</div>
             }
         }
         <span class="resource-list__title"> @Editable(model => model.Title)</span>
-        <i class="icon icon-download"></i>
+        <i class="icon icon-link"></i>
     </a>
 </li>
