@@ -2,10 +2,8 @@
 @using Sitecore.Feature.Blocks.Models
 
 @inherits GlassView<IResource>
-
-<div>
-    @Editable(model => model.Title)
-    <a href="@(Model.File?.Src)">
+<li>
+    <a href="@(Model.File?.Src) ">
         @if (Sitecore.Context.PageMode.IsExperienceEditor)
         {
             using (Html.Glass().BeginEditFrame(Model, "Edit", model => model.File))
@@ -13,6 +11,7 @@
                 <div>Edit file</div>
             }
         }
-        <i class="icon-download "></i> (Download)
+        <span class="resource-list__title"> @Editable(model => model.Title)</span>
+        <i class="icon icon-download"></i>
     </a>
-</div>
+</li>
