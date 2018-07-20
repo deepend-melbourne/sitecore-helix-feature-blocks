@@ -2,7 +2,7 @@
 ID: "35133749-7c37-4b9e-9b17-1a9729ea1cca"
 Parent: "204ffccf-b46b-4c3a-ae43-5bd439cac7ba"
 Template: "e269fbb5-3750-427a-9149-7aa950b49301"
-Path: /sitecore/templates/Feature/Blocks/_Banner Colour/Content
+Path: /sitecore/templates/Feature/Blocks/_Banner Colour/Banner
 DB: master
 Languages:
 - Language: en

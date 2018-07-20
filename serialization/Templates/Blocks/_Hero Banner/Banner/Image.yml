@@ -2,7 +2,7 @@
 ID: "8e5c0144-1fbb-4b1a-901a-9ee8db8900af"
 Parent: "ce4b661b-d78b-426e-bb8f-89d9af697f88"
 Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
-Path: /sitecore/templates/Feature/Blocks/_Hero Banner/Content/Image
+Path: /sitecore/templates/Feature/Blocks/_Hero Banner/Banner/Image
 DB: master
 SharedFields:
 - ID: "ab162cc0-dc80-4abf-8871-998ee5d7ba32"

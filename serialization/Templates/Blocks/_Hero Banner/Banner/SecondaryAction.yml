@@ -1,8 +1,8 @@
 ﻿---
-ID: "d9b717f0-4e9c-4ef6-b0ac-02ff24ee86e9"
+ID: "3991e59c-2cc9-4362-bce7-52fc07a56980"
 Parent: "ce4b661b-d78b-426e-bb8f-89d9af697f88"
 Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
-Path: /sitecore/templates/Feature/Blocks/_Hero Banner/Content/PrimaryAction
+Path: /sitecore/templates/Feature/Blocks/_Hero Banner/Banner/SecondaryAction
 DB: master
 SharedFields:
 - ID: "ab162cc0-dc80-4abf-8871-998ee5d7ba32"
@@ -10,13 +10,13 @@ SharedFields:
   Value: General Link
 - ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
   Hint: __Sortorder
-  Value: 300
+  Value: 400
 Languages:
 - Language: en
   Fields:
   - ID: "19a69332-a23e-4e70-8d16-b2640cb24cc8"
     Hint: Title
-    Value: Primary action
+    Value: Secondary action
   Versions:
   - Version: 1
     Fields:

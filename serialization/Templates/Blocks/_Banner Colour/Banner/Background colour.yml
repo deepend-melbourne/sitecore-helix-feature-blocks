@@ -2,7 +2,7 @@
 ID: "032feb94-af7b-480f-9f53-bced7ea0cdcf"
 Parent: "35133749-7c37-4b9e-9b17-1a9729ea1cca"
 Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
-Path: /sitecore/templates/Feature/Blocks/_Banner Colour/Content/Background colour
+Path: /sitecore/templates/Feature/Blocks/_Banner Colour/Banner/Background colour
 DB: master
 SharedFields:
 - ID: "ab162cc0-dc80-4abf-8871-998ee5d7ba32"

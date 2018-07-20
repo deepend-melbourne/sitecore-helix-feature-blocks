@@ -2,7 +2,7 @@
 ID: "f296f5fb-99bc-4fd8-9b51-41e4abd237a3"
 Parent: "ea058a9f-828e-4607-868b-3d4eb78c1bc0"
 Template: "e269fbb5-3750-427a-9149-7aa950b49301"
-Path: /sitecore/templates/Feature/Blocks/_Page Banner/Content
+Path: /sitecore/templates/Feature/Blocks/_Page Banner/Banner
 DB: master
 Languages:
 - Language: en
