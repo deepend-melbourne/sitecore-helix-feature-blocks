@@ -13,6 +13,10 @@
 
 }
 
-<div class="@Html.SpacingClasses(parameters)">
+<div class="image @Html.SpacingClasses(parameters)">
     @Editable(u => u.ImageSource, new { @class = responsiveClass })
+    @if (!string.IsNullOrEmpty(Model.Caption) || Sitecore.Context.PageMode.IsExperienceEditor)
+    {
+        <p class="image__caption">@Editable(u => u.Caption)</p>
+    }
 </div>

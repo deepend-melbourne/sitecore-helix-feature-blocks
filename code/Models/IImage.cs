@@ -8,5 +8,7 @@ namespace Sitecore.Feature.Blocks.Models
     public interface IImage : IBaseItem
     {
         Image ImageSource { get; set; }
+
+        string Caption { get; set; }
     }
 }

@@ -13,16 +13,15 @@
 }
 
 <blockquote class="quote-box">
-	<p><i class="icon-quote "></i></p>
-	<p>@Editable(model => model.Body)</p>
-	<footer class="quote-box__footer">
+	<p class="blockquote__quote">@Editable(model => model.Body)</p>
+	<p  class="blockquote__author">
 		@if (!string.IsNullOrEmpty(Model.Author) || Sitecore.Context.PageMode.IsExperienceEditor)
         {
-            <span class="quote-box__name">@Editable(model => model.Author)</span><br/>
+            <span class="blockquote__name">@Editable(model => model.Author)</span>
         }
 		@if (!string.IsNullOrEmpty(Model.Title) || Sitecore.Context.PageMode.IsExperienceEditor)
         {
-            <span class="quote-box__title">@Editable(model => model.Title)</span>
+            <span class="blockquote__title">@Editable(model => model.Title)</span>
         }
-	</footer>
+	</p>
 </blockquote>
