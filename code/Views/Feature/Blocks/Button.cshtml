@@ -1,0 +1,24 @@
+@using Sitecore.Feature.Blocks
+@using Sitecore.Feature.Blocks.Models
+@using Sitecore.Foundation.Alerts.Extensions
+@using Sitecore.Foundation.Models.Extensions
+@using Glass.Mapper.Sc.Web.Mvc
+
+@inherits GlassView<IButton>
+
+@if (!Model.IsDerived(Templates.Button.ID))
+{
+    @Html.ShowRenderingAlert(nameof(Templates.Button))
+    return;
+}
+
+<a href="@(Model.Link?.Url)" class="button" target="@(Model.Link?.Target)" title="@(Model.Link?.Title)">
+    <span class="button__text">@Editable(model => model.Text)</span>
+    @if (Sitecore.Context.PageMode.IsExperienceEditor)
+    {
+        using (Html.Glass().BeginEditFrame(Model, "Edit", model => model.Link))
+        {
+            <small style="margin-left: 10px;">[Edit link]</small>
+        }
+    }
+</a>
