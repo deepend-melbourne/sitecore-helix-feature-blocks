@@ -134,8 +134,10 @@ namespace Sitecore.Feature.Blocks
                 public struct Content
                 {
                     public const string VideoUrl_String = "{C61B72BA-ED69-48B8-8AFC-8FD1CBE42F9B}";
+                    public const string Transcript_String = "{A5250100-8B7C-4DAC-A690-18C291C7CACC}";
 
                     public static readonly ID VideoUrl = new ID(VideoUrl_String);
+                    public static readonly ID Transcript = new ID(Transcript_String);
                 }
             }
         }

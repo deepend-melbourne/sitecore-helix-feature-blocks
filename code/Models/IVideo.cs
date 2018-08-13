@@ -9,5 +9,8 @@ namespace Sitecore.Feature.Blocks.Models
     {
         [SitecoreField(FieldId = Templates.Video.Fields.Content.VideoUrl_String)]
         Link VideoUrl { get; set; }
+
+        [SitecoreField(FieldId = Templates.Video.Fields.Content.Transcript_String)]
+        File Transcript { get; set; }
     }
 }
