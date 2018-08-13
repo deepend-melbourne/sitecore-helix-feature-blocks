@@ -60,6 +60,7 @@
     <Compile Include="ViewModels\HeroBannerViewModel.cs" />
     <None Include="packages.config" />
     <Content Include="Views\Feature\Blocks\ResourceLink.cshtml" />
+    <None Include="Views\Feature\Blocks\LastUpdated.cshtml" />
     <None Include="Views\Feature\Blocks\PageBanner.cshtml" />
     <Content Include="Views\Feature\Blocks\Button.cshtml" />
   </ItemGroup>
