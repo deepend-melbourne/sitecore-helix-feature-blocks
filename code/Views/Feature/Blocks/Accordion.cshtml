@@ -26,14 +26,19 @@
     </fieldset>
 }
 
-<section class="accordion" data-accordion data-allow-all-closed="true" data-multi-expand="true">
+<ul class="accordion"
+    data-accordion
+    data-allow-all-closed="true"
+    data-multi-expand="true">
     @foreach (var key in Model.Sections.Keys)
     {
-        <section class="accordion-item" data-accordion-item>
-            <h1 href="#" class="accordion-title">@key</h1>
-            <div class="accordion-content" data-tab-content>
-                @Model.Sections[key.ToString()]
+        <li class="accordion__item" data-accordion-item>
+            <p class="accordion__title" data-accordion-title>
+                @key
+            </p>
+            <div class="accordion__content" data-tab-content>
+                <p>@Model.Sections[key.ToString()]</p>
             </div>
-        </section>
+        </li>
     }
-</section>
+</ul>
