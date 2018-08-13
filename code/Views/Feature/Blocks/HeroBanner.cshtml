@@ -19,52 +19,41 @@
 
         <p>This section will not be output on the public site, it is only available for content editors to edit parts of this control.</p>
 
-        @using (Html.Glass().BeginEditFrame(Model, "Edit Video", model => model.Video))
+        @using (Html.Glass().BeginEditFrame(
+            Model,
+            "Edit Hero Banner",
+            model => model.Video,
+            model => model.Image,
+            model => model.PrimaryAction,
+            model => model.SecondaryAction))
         {
-            <text>Edit video</text>
-        }
-
-        @using (Html.Glass().BeginEditFrame(Model, "Edit Image", model => model.Image))
-        {
-            <text>Edit image</text>
-        }
-
-        @using (Html.Glass().BeginEditFrame(Model, "Edit Primary Action", model => model.PrimaryAction))
-        {
-            <text>Edit Primary Action</text>
-        }
-
-        @using (Html.Glass().BeginEditFrame(Model, "Edit Secondary Action", model => model.SecondaryAction))
-        {
-            <text>Edit Secondary Action</text>
+            <text>Edit Hero Banner</text>
         }
     </fieldset>
 }
+@{
+    var introClasses = string.Empty;
 
-<div class="page-intro image-right">
+    if (Model.Image != null)
+    {
+        introClasses += "image-right";
+    }
+}
+
+<div class="page-intro @introClasses" style="background-color: @(Model.BackgroundColour)">
     <div class="grid-x">
-        <div class="cell small-12 medium-6 page-intro__image" style="background-color: @(Model.BackgroundColour)">
-            <div class="grid-x grid-padding-x">
-                <div class="cell medium-12 large-10">
-                    @if (Model.Image != null)
-                    {
-                        <img src="@Model.Image.Src" alt="@Model.Image.Alt">
-                    }
-                </div>
-            </div>
-        </div>
         <div class="cell small-12 medium-6 page-intro__text" style="background-color: @(Model.BackgroundColour)">
             <div class="grid-x grid-padding-x">
                 <div class="cell medium-12 large-10">
                     @Html.Sitecore().Placeholder("breadcrumb")
                     @if (!string.IsNullOrEmpty(Model.Title) || Sitecore.Context.PageMode.IsExperienceEditor)
                     {
-                        <h1 class="page-intro__title h2">@Model.Title</h1>
+                        <h1 class="page-intro__title h2">@Editable(model => model.Title)</h1>
                     }
                     @if (!string.IsNullOrEmpty(Model.Subtitle) || Sitecore.Context.PageMode.IsExperienceEditor)
                     {
                         <div class="page-intro__content">
-                            @Model.Subtitle
+                            @Editable(model => model.Subtitle)
                         </div>
                     }
                     <ul class="page-intro__links">
@@ -86,9 +75,25 @@
                                 </a>
                             </li>
                         }
+                        @if (Model.Video != null)
+                        {
+                            <a class="video-link"
+                               href="@Model.Video.Url">
+                                <i class="icon icon-play"></i>
+                                <span>Play Video</span>
+                            </a>
+                        }
                     </ul>
                 </div>
             </div>
         </div>
+        @if (Model.Image != null)
+        {
+            <div class="cell small-12 medium-6 page-intro__image" style="background-color: @(Model.BackgroundColour)">
+                <div class="grid-x grid-padding-x">
+                    <img src="@Model.Image.Src" alt="@Model.Image.Alt">
+                </div>
+            </div>
+        }
     </div>
 </div>

@@ -4,6 +4,10 @@ Parent: "0c6fd9c4-a647-4e30-a373-1c7293b0dac8"
 Template: "ab86861a-6030-46c5-b394-e8f99e8b87db"
 Path: /sitecore/templates/Feature/Blocks/Content Types/Carousel/Carousel Slide
 DB: master
+SharedFields:
+- ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
+  Hint: __Icon
+  Value: Applications/32x32/window_dialog.png
 Languages:
 - Language: en
   Versions:
