@@ -21,7 +21,16 @@ else
     <li class="carousel__slide">
         @if (Model.Image != null)
         {
-            <img src="@Model.Image.Src" class="hero__image" srcset="@Model.Image.Src?w=1000 1000w,@Model.Image.Src?w=1800 1800w,@Model.Image.Src?w=2800 2800w" alt="@Model.Image.Alt" />
+            if (Model.Link != null)
+            {
+                <a href="@Model.Link.Url" target="@Model.Link.Target" title="@Model.Link.Text">
+                    <img src="@Model.Image.Src" srcset="@Model.Image.Src?w=1000 1000w,@Model.Image.Src?w=1800 1800w,@Model.Image.Src?w=2800 2800w" alt="@Model.Image.Alt" />
+                </a>
+            }
+            else
+            {
+                <img src="@Model.Image.Src" srcset="@Model.Image.Src?w=1000 1000w,@Model.Image.Src?w=1800 1800w,@Model.Image.Src?w=2800 2800w" alt="@Model.Image.Alt" />
+            }
         }
     </li>
 }
