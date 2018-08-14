@@ -63,6 +63,7 @@
     <None Include="Views\Feature\Blocks\LastUpdated.cshtml" />
     <None Include="Views\Feature\Blocks\PageBanner.cshtml" />
     <Content Include="Views\Feature\Blocks\Button.cshtml" />
+    <None Include="Views\Feature\Blocks\Share.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Properties\" />
