@@ -1,0 +1,26 @@
+@using Glass.Mapper.Sc.Web.Mvc
+@using Sitecore.Feature.Blocks.Models
+@inherits GlassView<IAccordionSection>
+
+
+<li class="accordion__item"
+    data-accordion-item>
+    <div class="accordion__title"
+         data-accordion-title>
+        <h3 class="h5 accordion__heading">
+            @Editable(model => model.Title)
+        </h3>
+        @if (!string.IsNullOrEmpty(Model.Abstract) || Sitecore.Context.PageMode.IsExperienceEditor)
+        {
+            <p>@Editable(model => model.Abstract)</p>
+        }
+    </div>
+    <div class="accordion__content"
+         data-tab-content>
+        @Html.Raw(Model.Body)
+    </div>
+    @if (Sitecore.Context.PageMode.IsExperienceEditor)
+    {
+        @Editable(model => model.Body)
+    }
+</li>

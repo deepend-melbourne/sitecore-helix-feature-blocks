@@ -6,12 +6,6 @@
 
 @inherits GlassView<IAccordion>
 
-@if (!Model.IsDerived(Templates.Accordion.ID))
-{
-    @Html.ShowRenderingAlert(nameof(Templates.Accordion))
-    return;
-}
-
 @if (Sitecore.Context.PageMode.IsExperienceEditor)
 {
     <fieldset>
@@ -19,26 +13,15 @@
 
         <p>This section will not be output on the public site, it is only available for content editors to edit parts of this control.</p>
 
-        @using (Html.Glass().BeginEditFrame(Model, "Edit Sections", model => model.Sections))
-        {
-            <text>Edit Sections</text>
-        }
+        @Html.Sitecore().DynamicPlaceholder("accordion-list")
     </fieldset>
 }
-
-<ul class="accordion"
-    data-accordion
-    data-allow-all-closed="true"
-    data-multi-expand="true">
-    @foreach (var key in Model.Sections.Keys)
-    {
-        <li class="accordion__item" data-accordion-item>
-            <p class="accordion__title" data-accordion-title>
-                @key
-            </p>
-            <div class="accordion__content" data-tab-content>
-                <p>@Model.Sections[key.ToString()]</p>
-            </div>
-        </li>
-    }
-</ul>
+else
+{
+    <ul class="accordion"
+        data-accordion
+        data-allow-all-closed="true"
+        data-multi-expand="true">
+        @Html.Sitecore().DynamicPlaceholder("accordion-list")
+    </ul>
+}

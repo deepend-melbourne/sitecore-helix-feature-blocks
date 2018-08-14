@@ -173,6 +173,26 @@ namespace Sitecore.Feature.Blocks
             }
         }
 
+        public struct AccordionSection
+        {
+            public const string ID_String = "{D4A35B12-33DE-4721-AD78-E5B4DE223A2B}";
+            public static readonly ID ID = new ID(ID_String);
+
+            public struct Fields
+            {
+                public struct Content
+                {
+                    public const string Title_String = "{C48EBC1E-7AE9-4E77-9216-9946084859F7}";
+                    public const string Abstract_String = "{45BC43B7-45FD-4646-BEFF-226C17638C15}";
+                    public const string Body_String = "{53AA43B3-0BF4-461E-BABC-35F6F90464AC}";
+
+                    public static readonly ID Title = new ID(Title_String);
+                    public static readonly ID Abstract = new ID(Abstract_String);
+                    public static readonly ID Body = new ID(Body_String);
+                }
+            }
+        }
+
         public struct ContentFinder
         {
             public const string ID_String = "{8E07CC94-A0EE-456A-82A1-67856D6C7062}";
