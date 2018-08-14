@@ -37,7 +37,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Models\IAudio.cs" />
-    <Compile Include="Models\IBannerColour.cs" />
+    <Compile Include="Models\IColourScheme.cs" />
+    <Compile Include="Models\IPageScheme.cs" />
     <Compile Include="Models\IPageBanner.cs" />
     <Compile Include="Models\IButton.cs" />
     <Compile Include="Models\IResourceLink.cs" />

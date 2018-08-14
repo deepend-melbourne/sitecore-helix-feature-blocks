@@ -108,7 +108,7 @@ namespace Sitecore.Feature.Blocks
             }
         }
 
-        public struct BannerColour
+        public struct PageScheme
         {
             public const string ID_String = "{204FFCCF-B46B-4C3A-AE43-5BD439CAC7BA}";
             public static readonly ID ID = new ID(ID_String);
@@ -117,10 +117,25 @@ namespace Sitecore.Feature.Blocks
             {
                 public struct Content
                 {
-                    public const string BackgroundColour_String = "{032FEB94-AF7B-480F-9F53-BCED7EA0CDCF}";
+                    public const string PageColourScheme_String = "{032FEB94-AF7B-480F-9F53-BCED7EA0CDCF}";
 
-                    public static readonly ID BackgroundColour = new ID(BackgroundColour_String);
+                    public static readonly ID PageColourScheme = new ID(PageColourScheme_String);
                 }
+            }
+        }
+
+        public static class ColourScheme
+        {
+            public const string ID_String = "{D30EDEDD-BA1B-4C43-B640-EAB748B9FB49}";
+            public static readonly ID ID = new ID(ID_String);
+
+            public static class Fields
+            {
+                public const string CssClass_String = "{0BEC50E4-2D6C-4F88-82BA-87088F217CE1}";
+                public const string Badge_String = "{82A4304A-AA70-4DA9-B53F-003F30C2293A}";
+
+                public static readonly ID CssClass = new ID(CssClass_String);
+                public static readonly ID Badge = new ID(Badge_String);
             }
         }
 

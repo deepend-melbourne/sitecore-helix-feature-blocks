@@ -5,7 +5,7 @@ using Sitecore.Foundation.Models.Models.Interfaces;
 namespace Sitecore.Feature.Blocks.Models
 {
     [SitecoreType(TemplateId = Templates.HeroBanner.ID_String, AutoMap = true)]
-    public interface IHeroBanner : IBaseItem, IBannerColour
+    public interface IHeroBanner : IBaseItem, IPageScheme
     {
         [SitecoreField(FieldId = Templates.HeroBanner.Fields.Content.Title_String)]
         string Title { get; set; }

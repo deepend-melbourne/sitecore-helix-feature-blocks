@@ -40,9 +40,9 @@
     }
 }
 
-<div class="page-intro @introClasses" style="background-color: @(Model.BackgroundColour)">
+<div class="page-intro @introClasses">
     <div class="grid-x">
-        <div class="cell small-12 medium-6 page-intro__text" style="background-color: @(Model.BackgroundColour)">
+        <div class="cell small-12 medium-6 page-intro__text">
             <div class="grid-x grid-padding-x">
                 <div class="cell medium-12 large-10">
                     @Html.Sitecore().Placeholder("breadcrumb")
@@ -89,7 +89,7 @@
         </div>
         @if (Model.Image != null)
         {
-            <div class="cell small-12 medium-6 page-intro__image" style="background-color: @(Model.BackgroundColour)">
+            <div class="cell small-12 medium-6 page-intro__image">
                 <div class="grid-x grid-padding-x">
                     <img src="@Model.Image.Src" alt="@Model.Image.Alt">
                 </div>

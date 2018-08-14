@@ -1,0 +1,18 @@
+﻿---
+ID: "19737d68-b65a-4721-9345-e717d9494a2f"
+Parent: "fed9a49d-f0c0-431e-aa1f-2f6903c39de8"
+Template: "0437fee2-44c9-46a6-abe9-28858d9fee8c"
+Path: /sitecore/templates/Feature/Blocks/Content Types/Colour Scheme
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20180814T020343Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\admin

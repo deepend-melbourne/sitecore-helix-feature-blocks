@@ -1,8 +1,8 @@
 ﻿---
-ID: "032feb94-af7b-480f-9f53-bced7ea0cdcf"
-Parent: "35133749-7c37-4b9e-9b17-1a9729ea1cca"
+ID: "0bec50e4-2d6c-4f88-82ba-87088f217ce1"
+Parent: "f8d7430e-ef21-44b7-83e0-1ed71e129219"
 Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
-Path: /sitecore/templates/Feature/Blocks/_Banner Colour/Banner/Background colour
+Path: /sitecore/templates/Feature/Blocks/Content Types/Colour Scheme/Colour Scheme/Look and feel/Css Class
 DB: master
 SharedFields:
 - ID: "ab162cc0-dc80-4abf-8871-998ee5d7ba32"
@@ -18,4 +18,4 @@ Languages:
     Fields:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
-      Value: 20180719T232929Z
+      Value: 20180813T013321Z
