@@ -5,7 +5,7 @@ using Sitecore.Foundation.Models.Models.Interfaces;
 namespace Sitecore.Feature.Blocks.Models
 {
     [SitecoreType(TemplateId = Templates.HeroBanner.ID_String, AutoMap = true)]
-    public interface IHeroBanner : IBaseItem, IPageScheme
+    public interface IHeroBanner : IBaseItem, IVideo
     {
         [SitecoreField(FieldId = Templates.HeroBanner.Fields.Content.Title_String)]
         string Title { get; set; }
@@ -16,8 +16,8 @@ namespace Sitecore.Feature.Blocks.Models
         [SitecoreField(FieldId = Templates.HeroBanner.Fields.Content.Image_String)]
         Image Image { get; set; }
 
-        [SitecoreField(FieldId = Templates.HeroBanner.Fields.Content.Video_String)]
-        Link Video { get; set; }
+        [SitecoreField(FieldId = Templates.HeroBanner.Fields.Content.ImageBackgroundColour_String)]
+        string ImageBackgroundColour { get; set; }
 
         [SitecoreField(FieldId = Templates.HeroBanner.Fields.Content.PrimaryAction_String)]
         Link PrimaryAction { get; set; }

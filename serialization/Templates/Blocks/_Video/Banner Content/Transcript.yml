@@ -1,13 +1,13 @@
 ﻿---
-ID: "9f829e30-31be-4612-ae8b-c82ae485ce01"
-Parent: "ce4b661b-d78b-426e-bb8f-89d9af697f88"
+ID: "a5250100-8b7c-4dac-a690-18c291c7cacc"
+Parent: "87a96b23-98d3-4875-aeb4-bea50c09adbe"
 Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
-Path: /sitecore/templates/Feature/Blocks/_Hero Banner/Banner/Video
+Path: /sitecore/templates/Feature/Blocks/_Video/Banner Content/Transcript
 DB: master
 SharedFields:
 - ID: "ab162cc0-dc80-4abf-8871-998ee5d7ba32"
   Hint: Type
-  Value: General Link
+  Value: File
 - ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
   Hint: __Sortorder
   Value: 200
@@ -18,4 +18,4 @@ Languages:
     Fields:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
-      Value: 20180530T011505Z
+      Value: 20180813T041436Z

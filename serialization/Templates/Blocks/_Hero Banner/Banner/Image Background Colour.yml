@@ -1,16 +1,16 @@
 ﻿---
-ID: "c61b72ba-ed69-48b8-8afc-8fd1cbe42f9b"
-Parent: "87a96b23-98d3-4875-aeb4-bea50c09adbe"
+ID: "25471bc4-e99f-41bc-a293-437c2370d24e"
+Parent: "ce4b661b-d78b-426e-bb8f-89d9af697f88"
 Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
-Path: /sitecore/templates/Feature/Blocks/_Video/Content/VideoUrl
+Path: /sitecore/templates/Feature/Blocks/_Hero Banner/Banner/Image Background Colour
 DB: master
 SharedFields:
 - ID: "ab162cc0-dc80-4abf-8871-998ee5d7ba32"
   Hint: Type
-  Value: General Link
+  Value: "Single-Line Text"
 - ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
   Hint: __Sortorder
-  Value: 100
+  Value: 150
 Languages:
 - Language: en
   Versions:
@@ -18,4 +18,4 @@ Languages:
     Fields:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
-      Value: 20180530T014402Z
+      Value: 20180814T231524Z

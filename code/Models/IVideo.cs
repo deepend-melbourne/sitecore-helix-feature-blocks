@@ -7,8 +7,8 @@ namespace Sitecore.Feature.Blocks.Models
     [SitecoreType(TemplateId = Templates.Video.ID_String, AutoMap = true)]
     public interface IVideo : IBaseItem
     {
-        [SitecoreField(FieldId = Templates.Video.Fields.Content.VideoUrl_String)]
-        Link VideoUrl { get; set; }
+        [SitecoreField(FieldId = Templates.Video.Fields.Content.YoutubeVideoId_String)]
+        string YoutubeVideoId { get; set; }
 
         [SitecoreField(FieldId = Templates.Video.Fields.Content.Transcript_String)]
         File Transcript { get; set; }

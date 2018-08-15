@@ -19,18 +19,21 @@
 
         <p>This section will not be output on the public site, it is only available for content editors to edit parts of this control.</p>
 
-        @using (Html.Glass().BeginEditFrame(
-            Model,
-            "Edit Hero Banner",
-            model => model.Video,
-            model => model.Image,
-            model => model.PrimaryAction,
-            model => model.SecondaryAction))
+        @using (Html.Glass().BeginEditFrame(Model, "Edit Hero Links", model => model.PrimaryAction, model => model.SecondaryAction))
         {
-            <text>Edit Hero Banner</text>
+            <text>Edit Hero Links</text>
+        }
+        @using (Html.Glass().BeginEditFrame(Model, "Edit Hero Image", model => model.Image))
+        {
+            <text>Edit Hero Image</text>
+        }
+        @using (Html.Glass().BeginEditFrame(Model, "Edit Video", model => model.YoutubeVideoId, model => model.Transcript))
+        {
+            <text>Edit Hero Video</text>
         }
     </fieldset>
 }
+
 @{
     var introClasses = string.Empty;
 
@@ -38,62 +41,72 @@
     {
         introClasses += "image-right";
     }
-}
 
-<div class="page-intro @introClasses">
-    <div class="grid-x">
-        <div class="cell small-12 medium-6 page-intro__text">
-            <div class="grid-x grid-padding-x">
-                <div class="cell medium-12 large-10">
-                    @Html.Sitecore().Placeholder("breadcrumb")
-                    @if (!string.IsNullOrEmpty(Model.Title) || Sitecore.Context.PageMode.IsExperienceEditor)
-                    {
-                        <h1 class="page-intro__title h2">@Editable(model => model.Title)</h1>
-                    }
-                    @if (!string.IsNullOrEmpty(Model.Subtitle) || Sitecore.Context.PageMode.IsExperienceEditor)
-                    {
-                        <div class="page-intro__content">
-                            @Editable(model => model.Subtitle)
-                        </div>
-                    }
-                    <ul class="page-intro__links">
-                        @if (Model.PrimaryAction != null)
-                        {
-                            <li class="page-intro__link">
-                                <a href="@Model.PrimaryAction.Url" class="arrow-link">
-                                    <i class="icon icon-chevron-right"></i>
-                                    @Model.PrimaryAction.Text
-                                </a>
-                            </li>
-                        }
-                        @if (Model.SecondaryAction != null)
-                        {
-                            <li class="page-intro__link">
-                                <a href="@Model.SecondaryAction.Url" class="arrow-link">
-                                    <i class="icon icon-chevron-right"></i>
-                                    @Model.SecondaryAction.Text
-                                </a>
-                            </li>
-                        }
-                        @if (Model.Video != null)
-                        {
-                            <a class="video-link"
-                               href="@Model.Video.Url">
-                                <i class="icon icon-play"></i>
-                                <span>Play Video</span>
-                            </a>
-                        }
-                    </ul>
-                </div>
-            </div>
-        </div>
-        @if (Model.Image != null)
-        {
-            <div class="cell small-12 medium-6 page-intro__image">
+    var hasVideo = !string.IsNullOrEmpty(Model.YoutubeVideoId);
+
+
+    <div class="page-intro @introClasses">
+        <div class="grid-x">
+            <div class="cell small-12 medium-6 page-intro__text">
                 <div class="grid-x grid-padding-x">
-                    <img src="@Model.Image.Src" alt="@Model.Image.Alt">
+                    <div class="cell medium-12 large-10">
+                        @Html.Sitecore().Placeholder("breadcrumb")
+                        @if (!string.IsNullOrEmpty(Model.Title) || Sitecore.Context.PageMode.IsExperienceEditor)
+                        {
+                            <h1 class="page-intro__title h2">@Editable(model => model.Title)</h1>
+                        }
+                        @if (!string.IsNullOrEmpty(Model.Subtitle) || Sitecore.Context.PageMode.IsExperienceEditor)
+                        {
+                            <div class="page-intro__content">
+                                @Editable(model => model.Subtitle)
+                            </div>
+                        }
+                        <ul class="page-intro__links">
+                            @if (Model.PrimaryAction != null)
+                            {
+                                <li class="page-intro__link">
+                                    <a href="@Model.PrimaryAction.Url" class="arrow-link">
+                                        <i class="icon icon-chevron-right"></i>
+                                        @Model.PrimaryAction.Text
+                                    </a>
+                                </li>
+                            }
+                            @if (Model.SecondaryAction != null)
+                            {
+                                <li class="page-intro__link">
+                                    <a href="@Model.SecondaryAction.Url" class="arrow-link">
+                                        <i class="icon icon-chevron-right"></i>
+                                        @Model.SecondaryAction.Text
+                                    </a>
+                                </li>
+                            }
+                            @if (hasVideo)
+                            {
+                                <a class="video-link"
+                                   href="https://www.youtube.com/embed/@(Model.YoutubeVideoId)?rel=0&autoplay=1"
+                                   data-video-link="@(Model.YoutubeVideoId)">
+                                    <i class="icon icon-play"></i>
+                                    <span>Play Video</span>
+                                </a>
+                            }
+                        </ul>
+                    </div>
                 </div>
             </div>
-        }
+            @if (hasVideo)
+            {
+                <div class="cell small-12 medium-6 page-intro__image"
+                     style="background-image: url(https://img.youtube.com/vi/@(Model.YoutubeVideoId)/0.jpg)">
+                </div>
+            }
+            else if (Model.Image != null)
+            {
+                <div class="cell small-12 medium-6 page-intro__image" style="">
+                    <div class="grid-x grid-padding-x">
+                        <img src="@Model.Image.Src" alt="@Model.Image.Alt">
+                    </div>
+                </div>
+            }
+        </div>
     </div>
-</div>
+}

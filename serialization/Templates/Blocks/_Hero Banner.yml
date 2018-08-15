@@ -8,7 +8,9 @@ SharedFields:
 - ID: "12c33f3f-86c5-43a5-aeb4-5598cec45116"
   Hint: __Base template
   Type: tree list
-  Value: "{204FFCCF-B46B-4C3A-AE43-5BD439CAC7BA}"
+  Value: |
+    {204FFCCF-B46B-4C3A-AE43-5BD439CAC7BA}
+    {85C97A85-046E-4D78-969C-C13C2E2E3E05}
 Languages:
 - Language: en
   Versions:
