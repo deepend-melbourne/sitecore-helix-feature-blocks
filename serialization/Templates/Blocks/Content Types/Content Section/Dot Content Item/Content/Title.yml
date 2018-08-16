@@ -1,16 +1,16 @@
 ﻿---
-ID: "c59b9714-225e-4b06-9272-e88a122f6303"
-Parent: "ce4b661b-d78b-426e-bb8f-89d9af697f88"
+ID: "1a125988-696f-47c2-a82c-de322ecd1451"
+Parent: "15b8d64c-7b93-4383-90d6-40c8ebc7b1cf"
 Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
-Path: /sitecore/templates/Feature/Blocks/_Hero Banner/Banner/Subtitle
+Path: /sitecore/templates/Feature/Blocks/Content Types/Content Section/Dot Content Item/Content/Title
 DB: master
 SharedFields:
 - ID: "ab162cc0-dc80-4abf-8871-998ee5d7ba32"
   Hint: Type
-  Value: "Multi-Line Text"
+  Value: "Single-Line Text"
 - ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
   Hint: __Sortorder
-  Value: 50
+  Value: 200
 Languages:
 - Language: en
   Versions:
@@ -18,4 +18,4 @@ Languages:
     Fields:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
-      Value: 20180530T011505Z
+      Value: 20180815T115439Z

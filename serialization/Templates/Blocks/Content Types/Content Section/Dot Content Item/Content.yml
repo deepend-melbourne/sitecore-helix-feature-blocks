@@ -1,0 +1,18 @@
+﻿---
+ID: "15b8d64c-7b93-4383-90d6-40c8ebc7b1cf"
+Parent: "644304ca-b9ca-452d-86ab-c88590b65146"
+Template: "e269fbb5-3750-427a-9149-7aa950b49301"
+Path: /sitecore/templates/Feature/Blocks/Content Types/Content Section/Dot Content Item/Content
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20180815T115439Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\admin

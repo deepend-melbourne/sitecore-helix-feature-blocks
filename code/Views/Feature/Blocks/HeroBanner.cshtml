@@ -90,12 +90,15 @@
                                         <span>Play Video</span>
                                     </a>
                                 </li>
-                                <li class="page-intro__link page-intro__link--transcript">
-                                    <a href="#" class="arrow-link">
-                                        <i class="icon icon-chevron-right"></i>
-                                        Download transcript
-                                    </a>
-                                </li>
+                                if(Model.Transcript.Id != Guid.Empty)
+                                {
+                                    <li class="page-intro__link page-intro__link--transcript">
+                                        <a href="#" class="arrow-link">
+                                            <i class="icon icon-chevron-right"></i>
+                                            Download transcript
+                                        </a>
+                                    </li>
+                                }
                             }
                         </ul>
                     </div>

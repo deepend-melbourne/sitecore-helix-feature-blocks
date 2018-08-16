@@ -36,6 +36,8 @@
     <Content Include="Views\**\*.cshtml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Models\IDotContentItem.cs" />
+    <Compile Include="Models\IContentSection.cs" />
     <Compile Include="Models\IAccordionSection.cs" />
     <Compile Include="Models\IAudio.cs" />
     <Compile Include="Models\IColourScheme.cs" />
@@ -63,6 +65,8 @@
     <None Include="packages.config" />
     <Content Include="Views\Feature\Blocks\ResourceLink.cshtml" />
     <Content Include="Views\Feature\Blocks\AccordionSection.cshtml" />
+    <None Include="Views\Feature\Blocks\ContentSection.cshtml" />
+    <None Include="Views\Feature\Blocks\DotContentItem.cshtml" />
     <None Include="Views\Feature\Blocks\LastUpdated.cshtml" />
     <None Include="Views\Feature\Blocks\PageBanner.cshtml" />
     <Content Include="Views\Feature\Blocks\Button.cshtml" />

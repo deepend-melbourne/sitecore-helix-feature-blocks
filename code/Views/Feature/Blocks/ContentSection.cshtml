@@ -1,0 +1,10 @@
+@using Glass.Mapper.Sc.Web.Mvc
+@using Sitecore.Feature.Blocks.Models
+@inherits GlassView<IContentSection>
+
+<section class="content-section">
+    <h2 class="h3 content-section__title">@Editable(x => x.SectionTitle)</h2>
+    <div class="grid-x grid-padding-x">
+        @Html.Sitecore().DynamicPlaceholder("cells")
+    </div>
+</section>

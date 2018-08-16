@@ -1,0 +1,20 @@
+@using Glass.Mapper.Sc.Web.Mvc
+@using Sitecore.Feature.Blocks.Models
+@inherits GlassView<IDotContentItem>
+@if (Sitecore.Context.PageMode.IsExperienceEditor)
+{
+    using (Html.Glass().BeginEditFrame(Model, "Edit Dot Colour", model => model.DotColour))
+    {
+        <text>Edit Dot Colour</text>
+    }
+}
+<div class="@(Model.DotColour?.CssClass)">
+    <div class="dot-content">
+        <h3 class="h6 dot-content__title">
+            @Editable(x => x.Title)
+        </h3>
+        <div class="dot-content__text">
+            @Editable(x => x.Text)
+        </div>
+    </div>
+</div>
