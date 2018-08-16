@@ -64,7 +64,7 @@
                         <ul class="page-intro__links">
                             @if (Model.PrimaryAction != null)
                             {
-                                <li class="page-intro__link">
+                                <li class="page-intro__link page-intro__link--primary">
                                     <a href="@Model.PrimaryAction.Url" class="arrow-link">
                                         <i class="icon icon-chevron-right"></i>
                                         @Model.PrimaryAction.Text
@@ -73,7 +73,7 @@
                             }
                             @if (Model.SecondaryAction != null)
                             {
-                                <li class="page-intro__link">
+                                <li class="page-intro__link page-intro__link--secondary">
                                     <a href="@Model.SecondaryAction.Url" class="arrow-link">
                                         <i class="icon icon-chevron-right"></i>
                                         @Model.SecondaryAction.Text
@@ -82,12 +82,20 @@
                             }
                             @if (hasVideo)
                             {
-                                <a class="video-link"
-                                   href="https://www.youtube.com/embed/@(Model.YoutubeVideoId)?rel=0&autoplay=1"
-                                   data-video-link="@(Model.YoutubeVideoId)">
-                                    <i class="icon icon-play"></i>
-                                    <span>Play Video</span>
-                                </a>
+                                <li class="page-intro__link page-intro__link--video">
+                                    <a class="video-link"
+                                       href="https://www.youtube.com/embed/@(Model.YoutubeVideoId)?rel=0&autoplay=1"
+                                       data-video-link="@(Model.YoutubeVideoId)">
+                                        <i class="icon icon-play"></i>
+                                        <span>Play Video</span>
+                                    </a>
+                                </li>
+                                <li class="page-intro__link page-intro__link--transcript">
+                                    <a href="#" class="arrow-link">
+                                        <i class="icon icon-chevron-right"></i>
+                                        Download transcript
+                                    </a>
+                                </li>
                             }
                         </ul>
                     </div>
