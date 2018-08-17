@@ -42,9 +42,11 @@
     <Compile Include="Models\IAudio.cs" />
     <Compile Include="Models\IColourScheme.cs" />
     <Compile Include="Models\IFAQList.cs" />
+    <Compile Include="Models\IFeatureContentBox.cs" />
     <Compile Include="Models\IPageScheme.cs" />
     <Compile Include="Models\IPageBanner.cs" />
     <Compile Include="Models\IButton.cs" />
+    <Compile Include="Models\IRenderingParameters_FeatureContentBox.cs" />
     <Compile Include="Models\IRenderingParameters_ContentSection.cs" />
     <Compile Include="Models\IResourceLink.cs" />
     <Compile Include="Models\IResource.cs" />

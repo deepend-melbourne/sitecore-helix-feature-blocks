@@ -1,0 +1,21 @@
+﻿---
+ID: "576d377f-2512-4c4b-80a1-6021d6f3667f"
+Parent: "473a54e7-cbd5-44f6-a197-b36e3460507e"
+Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
+Path: /sitecore/templates/Feature/Blocks/Rendering Parameters/RenderingParameters_FeatureContentBox/Content/Image Align Right
+DB: master
+SharedFields:
+- ID: "ab162cc0-dc80-4abf-8871-998ee5d7ba32"
+  Hint: Type
+  Value: Checkbox
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 100
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20180816T233119Z

@@ -1,0 +1,14 @@
+﻿---
+ID: "8cf7f945-bda9-4076-b582-5144d2064ecb"
+Parent: "2cc9c831-8ffc-44ba-b040-d26ee68ddd2a"
+Template: "2cc9c831-8ffc-44ba-b040-d26ee68ddd2a"
+Path: /sitecore/templates/Feature/Blocks/Rendering Parameters/RenderingParameters_FeatureContentBox/__Standard Values
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20180816T233025Z

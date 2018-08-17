@@ -1,0 +1,38 @@
+@using Glass.Mapper.Sc.Fields
+@using Glass.Mapper.Sc.Web.Mvc
+@using Sitecore.Feature.Blocks.Models
+@inherits GlassView<IFeatureContentBox>
+
+@{
+    var parameters = GetRenderingParameters<IRenderingParameters_FeatureContentBox>();
+    var imageAlignClass = parameters != null && parameters.ImageAlignRight ? "image-right" : "image-left";
+}
+<div class="feature-box @imageAlignClass">
+    <div class="grid-x">
+        <div class="cell small-12 medium-6">
+            <div class="feature-box__image"
+                 style="background-color: #f6de43;">
+                @Editable(x => x.Image)
+            </div>
+        </div>
+        <div class="cell small-12 medium-6">
+            <div class="feature-box__text"
+                 style="background-color: #ffffff;">
+                <h2 class="h4 feature-box__title">@Editable(x => x.Title)</h2>
+                <div class="feature-box__content">
+                    @Editable(x => x.Text)
+                </div>
+                <div class="dual-btn">
+                    @if (Model.PrimaryAction != null || Sitecore.Context.PageMode.IsExperienceEditor)
+                    {
+                        @Editable(x => x.PrimaryAction, new { @class = "button button--light" })
+                    }
+                    @if (Model.SecondaryAction != null || Sitecore.Context.PageMode.IsExperienceEditor)
+                    {
+                        @Editable(x => x.SecondaryAction, new { @class = "button button--transparent" })
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

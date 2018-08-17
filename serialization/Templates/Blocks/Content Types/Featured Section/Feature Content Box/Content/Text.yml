@@ -1,0 +1,21 @@
+﻿---
+ID: "2b248632-9d7e-4ce2-a50b-db2a8b10c1c6"
+Parent: "d9e9be68-b63b-496b-b8f1-0ca342bdf468"
+Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
+Path: /sitecore/templates/Feature/Blocks/Content Types/Featured Section/Feature Content Box/Content/Text
+DB: master
+SharedFields:
+- ID: "ab162cc0-dc80-4abf-8871-998ee5d7ba32"
+  Hint: Type
+  Value: Rich Text
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 200
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20180817T042039Z

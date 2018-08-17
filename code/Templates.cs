@@ -37,6 +37,21 @@ namespace Sitecore.Feature.Blocks
             }
         }
 
+        public struct RenderingParameters_FeatureContentBox
+        {
+            public const string ID_String = "{2CC9C831-8FFC-44BA-B040-D26EE68DDD2A}";
+            public static readonly ID ID = new ID(ID_String);
+
+            public struct Fields
+            {
+                public struct Content
+                {
+                    public const string ImageAlignRight_String = "{576D377F-2512-4C4B-80A1-6021D6F3667F}";
+                    public static readonly ID ImageAlignRight = new ID(ImageAlignRight_String);
+                }
+            }
+        }
+
         public struct RenderingParameters_AlertBar
         {
             public const string ID_String = "{EFCAA850-DA51-4C36-BFE6-827392667CD4}";
@@ -395,6 +410,30 @@ namespace Sitecore.Feature.Blocks
                     public static readonly ID Title = new ID(Title_String);
                     public static readonly ID Links = new ID(Links_String);
                     public static readonly ID ViewMoreLink = new ID(ViewMoreLink_String);
+                }
+            }
+        }
+
+        public struct FeatureContentBox
+        {
+            public const string ID_String = "{7DCCDF53-FDAD-4074-AAE4-62357219B59F}";
+            public static readonly ID ID = new ID(ID_String);
+
+            public struct Fields
+            {
+                public struct Content
+                {
+                    public const string Title_String = "{9DBBE832-0FC5-46EF-9A04-C2EE4E5FF31C}";
+                    public const string Text_String = "{2B248632-9D7E-4CE2-A50B-DB2A8B10C1C6}";
+                    public const string Image_String = "{22B66738-7130-4126-92DE-90E691F52886}";
+                    public const string PrimaryAction_String = "{6D1F1348-89FE-4AFC-9C64-56E11945523F}";
+                    public const string SecondaryAction_String = "{37A12045-4923-4EB2-9C5B-74979B864BAF}";
+
+                    public static readonly ID Title = new ID(Title_String);
+                    public static readonly ID Text = new ID(Text_String);
+                    public static readonly ID Image = new ID(Image_String);
+                    public static readonly ID PrimaryAction = new ID(PrimaryAction_String);
+                    public static readonly ID SecondaryAction = new ID(SecondaryAction_String);
                 }
             }
         }
