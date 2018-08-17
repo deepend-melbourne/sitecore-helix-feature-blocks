@@ -22,6 +22,21 @@ namespace Sitecore.Feature.Blocks
             public static readonly ID ID = new ID(ID_String);
         }
 
+        public struct RenderingParameters_ContentSection
+        {
+            public const string ID_String = "{FE5BF3C4-C153-4F37-BB3B-9F5390BC7A94}";
+            public static readonly ID ID = new ID(ID_String);
+
+            public struct Fields
+            {
+                public struct Content
+                {
+                    public const string ShowPanelBox_String = "{F2EC10EA-6ACF-4A55-AAEA-BC04BF08760B}";
+                    public static readonly ID ShowPanelBox = new ID(ShowPanelBox_String);
+                }
+            }
+        }
+
         public struct RenderingParameters_AlertBar
         {
             public const string ID_String = "{EFCAA850-DA51-4C36-BFE6-827392667CD4}";
@@ -79,14 +94,12 @@ namespace Sitecore.Feature.Blocks
                     public const string Title_String = "{310DFC2A-586A-48D0-874D-01CE6024D4B7}";
                     public const string Subtitle_String = "{C59B9714-225E-4B06-9272-E88A122F6303}";
                     public const string Image_String = "{8E5C0144-1FBB-4B1A-901A-9EE8DB8900AF}";
-                    public const string ImageBackgroundColour_String = "{8E5C0144-1FBB-4B1A-901A-9EE8DB8900AF}";
                     public const string PrimaryAction_String = "{D9B717F0-4E9C-4EF6-B0AC-02FF24EE86E9}";
                     public const string SecondaryAction_String = "{3991E59C-2CC9-4362-BCE7-52FC07A56980}";
 
                     public static readonly ID Title = new ID(Title_String);
                     public static readonly ID Subtitle = new ID(Subtitle_String);
                     public static readonly ID Image = new ID(Image_String);
-                    public static readonly ID ImageBackgroundColour = new ID(ImageBackgroundColour_String);
                     public static readonly ID PrimaryAction = new ID(PrimaryAction_String);
                     public static readonly ID SecondaryAction = new ID(SecondaryAction_String);
                 }
@@ -362,6 +375,26 @@ namespace Sitecore.Feature.Blocks
                     public static readonly ID DotColour = new ID(DotColour_String);
                     public static readonly ID Title = new ID(Title_String);
                     public static readonly ID Text = new ID(Text_String);
+                }
+            }
+        }
+
+        public struct FAQList
+        {
+            public const string ID_String = "{3C6CE738-270C-4E7E-80D4-EB4405DF2CCE}";
+            public static readonly ID ID = new ID(ID_String);
+
+            public struct Fields
+            {
+                public struct Content
+                {
+                    public const string Title_String = "{D05E1C7F-AB17-48B5-ABC9-91794AC13086}";
+                    public const string Links_String = "{585C131F-ECEA-491D-B729-C90D394D713D}";
+                    public const string ViewMoreLink_String = "{002A1371-A39C-4855-82D3-4785D96DC85B}";
+
+                    public static readonly ID Title = new ID(Title_String);
+                    public static readonly ID Links = new ID(Links_String);
+                    public static readonly ID ViewMoreLink = new ID(ViewMoreLink_String);
                 }
             }
         }

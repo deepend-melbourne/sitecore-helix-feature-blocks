@@ -1,0 +1,40 @@
+@using Glass.Mapper.Sc.Web.Mvc
+@using Sitecore.Feature.Blocks.Models
+@inherits GlassView<IFAQList>
+@{
+    var faq = Model;
+}
+<div class="faq-list">
+    <h3 class="h5 faq-list__title">
+        @Editable(x => x.Title)
+    </h3>
+    <ul class="faq-list__links">
+        <!-- This should be an #each loop but it's not working with this setup.. -->
+        <li>
+            {{> arrow-link link_text='School checklist' link_href='#'}}
+        </li>
+        <li>
+            {{> arrow-link link_text='School checklist' link_href='#'}}
+        </li>
+        <li>
+            {{> arrow-link link_text='School checklist' link_href='#'}}
+        </li>
+        <li>
+            {{> arrow-link link_text='School checklist' link_href='#'}}
+        </li>
+    </ul>
+    @if (Model.ViewMoreLink != null || Sitecore.Context.PageMode.IsExperienceEditor)
+    {
+        <p class="faq-list__more">
+            <a class="arrow-link"
+               href="@Model.ViewMoreLink.Url">
+                <i class="icon icon-chevron-right"></i>
+                <span>@Model.ViewMoreLink.Text</span>
+            </a>
+            @using (Html.Glass().BeginEditFrame(Model, "Edit Link", model => model.ViewMoreLink))
+            {
+                <text>Edit Link</text>
+            }
+        </p>
+    }
+</div>

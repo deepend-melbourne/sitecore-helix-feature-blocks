@@ -41,9 +41,11 @@
     <Compile Include="Models\IAccordionSection.cs" />
     <Compile Include="Models\IAudio.cs" />
     <Compile Include="Models\IColourScheme.cs" />
+    <Compile Include="Models\IFAQList.cs" />
     <Compile Include="Models\IPageScheme.cs" />
     <Compile Include="Models\IPageBanner.cs" />
     <Compile Include="Models\IButton.cs" />
+    <Compile Include="Models\IRenderingParameters_ContentSection.cs" />
     <Compile Include="Models\IResourceLink.cs" />
     <Compile Include="Models\IResource.cs" />
     <Compile Include="Models\ICarouselSlide.cs" />
@@ -63,6 +65,7 @@
     <Compile Include="Templates.cs" />
     <Compile Include="ViewModels\HeroBannerViewModel.cs" />
     <None Include="packages.config" />
+    <None Include="Views\Feature\Blocks\FAQList.cshtml" />
     <Content Include="Views\Feature\Blocks\ResourceLink.cshtml" />
     <Content Include="Views\Feature\Blocks\AccordionSection.cshtml" />
     <None Include="Views\Feature\Blocks\ContentSection.cshtml" />

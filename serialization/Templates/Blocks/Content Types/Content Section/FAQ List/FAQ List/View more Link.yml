@@ -1,0 +1,21 @@
+﻿---
+ID: "002a1371-a39c-4855-82d3-4785d96dc85b"
+Parent: "e33b3ec3-044c-4fa9-8d4a-44209b4fea96"
+Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
+Path: /sitecore/templates/Feature/Blocks/Content Types/Content Section/FAQ List/FAQ List/View more Link
+DB: master
+SharedFields:
+- ID: "ab162cc0-dc80-4abf-8871-998ee5d7ba32"
+  Hint: Type
+  Value: General Link
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 300
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20180816T073405Z

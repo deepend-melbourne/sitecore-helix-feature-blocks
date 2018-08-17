@@ -16,9 +16,6 @@ namespace Sitecore.Feature.Blocks.Models
         [SitecoreField(FieldId = Templates.HeroBanner.Fields.Content.Image_String)]
         Image Image { get; set; }
 
-        [SitecoreField(FieldId = Templates.HeroBanner.Fields.Content.ImageBackgroundColour_String)]
-        string ImageBackgroundColour { get; set; }
-
         [SitecoreField(FieldId = Templates.HeroBanner.Fields.Content.PrimaryAction_String)]
         Link PrimaryAction { get; set; }
 
