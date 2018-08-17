@@ -1,27 +1,38 @@
 @using Glass.Mapper.Sc.Web.Mvc
 @using Sitecore.Feature.Blocks.Models
 @inherits GlassView<IFAQList>
-@{
-    var faq = Model;
+@if (Sitecore.Context.PageMode.IsExperienceEditor)
+{
+    <fieldset>
+        <legend><strong>FAQ List details</strong></legend>
+
+        <p>This section will not be output on the public site, it is only available for content editors to edit parts of this control.</p>
+
+        @using (Html.Glass().BeginEditFrame(Model, "Edit Links", model => model.Links))
+        {
+            <text>Edit Links</text>
+        }
+        @using (Html.Glass().BeginEditFrame(Model, "Edit View More Link", model => model.ViewMoreLink))
+        {
+            <text>Edit View More link</text>
+        }
+    </fieldset>
 }
+
 <div class="faq-list">
     <h3 class="h5 faq-list__title">
         @Editable(x => x.Title)
     </h3>
     <ul class="faq-list__links">
-        <!-- This should be an #each loop but it's not working with this setup.. -->
-        <li>
-            {{> arrow-link link_text='School checklist' link_href='#'}}
-        </li>
-        <li>
-            {{> arrow-link link_text='School checklist' link_href='#'}}
-        </li>
-        <li>
-            {{> arrow-link link_text='School checklist' link_href='#'}}
-        </li>
-        <li>
-            {{> arrow-link link_text='School checklist' link_href='#'}}
-        </li>
+        @foreach (var link in Model.Links)
+        {
+            <li>
+                <a class="arrow-link" href="@link.Url">
+                    <i class="icon icon-chevron-right"></i>
+                    <span>@link.Name</span>
+                </a>
+            </li>
+        }
     </ul>
     @if (Model.ViewMoreLink != null || Sitecore.Context.PageMode.IsExperienceEditor)
     {
@@ -31,10 +42,6 @@
                 <i class="icon icon-chevron-right"></i>
                 <span>@Model.ViewMoreLink.Text</span>
             </a>
-            @using (Html.Glass().BeginEditFrame(Model, "Edit Link", model => model.ViewMoreLink))
-            {
-                <text>Edit Link</text>
-            }
         </p>
     }
 </div>
