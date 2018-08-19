@@ -1,0 +1,8 @@
+@using Glass.Mapper.Sc.Web.Mvc
+@using Sitecore.Foundation.Models.Models.Interfaces
+
+@inherits GlassView<IBaseItem>
+<ul>
+    @Html.Sitecore().DynamicPlaceholder("references")
+</ul>
+

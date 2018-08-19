@@ -1,0 +1,15 @@
+@using Glass.Mapper.Sc.Web.Mvc
+@using Sitecore.Feature.Blocks.Models
+
+@inherits GlassView<IResourceLink>
+<li>
+    <i class="icon icon-link"></i>
+    <a href="@(Model.Link?.Url)">@Editable(model => model.Title)</a>
+    @if (Sitecore.Context.PageMode.IsExperienceEditor)
+    {
+        using (Html.Glass().BeginEditFrame(Model, "Edit", model => model.Link))
+        {
+            <div>Edit file</div>
+        }
+    }
+</li>
