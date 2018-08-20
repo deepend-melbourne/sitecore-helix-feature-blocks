@@ -12,7 +12,7 @@
     var parameters = GetRenderingParameters<IRenderingParameters_Title>();
 
     var headingSize = !string.IsNullOrEmpty(parameters?.HeadingSize) ? parameters.HeadingSize : "h1";
-    var headingStyle = !string.IsNullOrEmpty(parameters?.HeadingStyle) ? $"title--{parameters.HeadingStyle}" : "";
+    var headingStyle = !string.IsNullOrEmpty(parameters?.HeadingStyle) ? parameters.HeadingStyle : "";
 
     var underlineStyle = parameters?.TitleUnderline ?? false ? "title--underline" : "";
     var strikeStyle = parameters?.TitleStrike ?? false ? "title--strike" : "";
