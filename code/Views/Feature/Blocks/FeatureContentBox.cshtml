@@ -20,7 +20,9 @@
                  style="background-color: #ffffff;">
                 <h2 class="h4 feature-box__title">@Editable(x => x.Title)</h2>
                 <div class="feature-box__content">
-                    @Editable(x => x.Text)
+                    <div class="rte">
+                        @Editable(x => x.Text)
+                    </div>
                 </div>
                 <div class="dual-btn">
                     @if (Model.PrimaryAction != null || Sitecore.Context.PageMode.IsExperienceEditor)

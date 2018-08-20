@@ -1,19 +1,19 @@
 ﻿---
-ID: "2b248632-9d7e-4ce2-a50b-db2a8b10c1c6"
-Parent: "d9e9be68-b63b-496b-b8f1-0ca342bdf468"
+ID: "bce56484-c905-493e-a8f0-e4e2d892c04e"
+Parent: "5cf8589d-244c-47d9-82b8-6e07cc696834"
 Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
-Path: /sitecore/templates/Feature/Blocks/Content Types/Featured Section/Feature Content Box/Content/Text
+Path: /sitecore/templates/Feature/Blocks/Content Types/Content Section/Feature Icon Content Item/Content/Icon Image
 DB: master
 SharedFields:
 - ID: "1eb8ae32-e190-44a6-968d-ed904c794ebf"
   Hint: Source
-  Value: /sitecore/system/Settings/Html Editor Profiles/Rich Text Medium
+  Value: 
 - ID: "ab162cc0-dc80-4abf-8871-998ee5d7ba32"
   Hint: Type
-  Value: Rich Text
+  Value: Image
 - ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
   Hint: __Sortorder
-  Value: 200
+  Value: 100
 Languages:
 - Language: en
   Versions:
@@ -21,4 +21,4 @@ Languages:
     Fields:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
-      Value: 20180817T042039Z
+      Value: 20180815T115439Z

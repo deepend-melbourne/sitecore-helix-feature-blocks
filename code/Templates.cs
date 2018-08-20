@@ -437,5 +437,29 @@ namespace Sitecore.Feature.Blocks
                 }
             }
         }
+
+        public struct FeatureIconContentItem
+        {
+            public const string ID_String = "{CEFDD845-3E94-4AED-8516-1A0F4204FA20}";
+            public static readonly ID ID = new ID(ID_String);
+
+            public struct Fields
+            {
+                public struct Content
+                {
+                    public const string IconImage_String = "{BCE56484-C905-493E-A8F0-E4E2D892C04E}";
+                    public const string Title_String = "{D260A907-7D7C-41A4-87EF-F01766EA51DA}";
+                    public const string Text_String = "{C8B584E4-CBAD-4DB3-B8FF-0EFC0A21A0AE}";
+                    public const string Theme_String = "{1D3F3F09-299A-480A-91F6-71BB1979296B}";
+                    public const string Link_String = "{181713E4-308F-4CD1-9FFD-AB060F8AD2B4}";
+
+                    public static readonly ID Title = new ID(Title_String);
+                    public static readonly ID Text = new ID(Text_String);
+                    public static readonly ID IconImage = new ID(IconImage_String);
+                    public static readonly ID Theme = new ID(Theme_String);
+                    public static readonly ID Link = new ID(Link_String);
+                }
+            }
+        }
     }
 }

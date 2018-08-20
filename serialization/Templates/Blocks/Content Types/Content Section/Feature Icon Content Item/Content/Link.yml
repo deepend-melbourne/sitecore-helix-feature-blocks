@@ -1,0 +1,21 @@
+﻿---
+ID: "181713e4-308f-4cd1-9ffd-ab060f8ad2b4"
+Parent: "5cf8589d-244c-47d9-82b8-6e07cc696834"
+Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
+Path: /sitecore/templates/Feature/Blocks/Content Types/Content Section/Feature Icon Content Item/Content/Link
+DB: master
+SharedFields:
+- ID: "ab162cc0-dc80-4abf-8871-998ee5d7ba32"
+  Hint: Type
+  Value: General Link
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 400
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20180820T214607Z
