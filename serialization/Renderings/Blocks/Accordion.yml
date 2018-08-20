@@ -22,7 +22,7 @@ Languages:
     - ID: "1c307764-806c-42f0-b7ce-fc173ac8372b"
       Hint: Supports Local Datasource
       Type: Checkbox
-      Value: 1
+      Value: 0
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
       Value: 20180530T020106Z
