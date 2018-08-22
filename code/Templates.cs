@@ -32,7 +32,10 @@ namespace Sitecore.Feature.Blocks
                 public struct Content
                 {
                     public const string ShowPanelBox_String = "{F2EC10EA-6ACF-4A55-AAEA-BC04BF08760B}";
+                    public const string IsFeatureIconContent_String = "{C94F0B11-D072-4CF9-9B55-9CFCB7C41474}";
+
                     public static readonly ID ShowPanelBox = new ID(ShowPanelBox_String);
+                    public static readonly ID IsFeatureIconContent = new ID(IsFeatureIconContent_String);
                 }
             }
         }
