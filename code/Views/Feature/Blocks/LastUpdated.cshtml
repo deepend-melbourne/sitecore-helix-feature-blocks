@@ -2,4 +2,4 @@
 @using Sitecore.Foundation.Models.Models.Interfaces
 @inherits GlassView<IBaseItem>
 
-<p>Last updated: @Model.Updated</p>
+<p>Last updated: @Model.Updated.ToString("d MMM, yyyy")</p>
