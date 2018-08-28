@@ -109,7 +109,7 @@
             else if (Model.Image != null || Sitecore.Context.PageMode.IsExperienceEditor)
             {
                 <div class="cell small-12 medium-6 page-intro__image" 
-                     style="background-image: url(@Model.Image.Src)">
+                     style="background-image: url(@(Model.Image?.Src))">
                     @Editable(x => x.Image)
                 </div>
             }
