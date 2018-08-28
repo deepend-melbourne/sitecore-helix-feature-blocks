@@ -4,18 +4,29 @@
 @{
     var parameters = GetRenderingParameters<IRenderingParameters_ContentSection>();
     var showPanelBox = parameters != null && parameters.ShowPanelBox;
+    var isFeatureIconContent = parameters != null && parameters.IsFeatureIconContent;
+    var headingSize = isFeatureIconContent ? "h4" : "h3";
 }
+
 <section class="content-section">
     @if (showPanelBox)
     {
         @: <div class="content-section__box">
+        }
+    @if (!string.IsNullOrEmpty(Model.SectionTitle) || Sitecore.Context.PageMode.IsExperienceEditor)
+    {
+        <h2 class="@headingSize content-section__title">@Editable(x => x.SectionTitle)</h2>
     }
-    <h2 class="h3 content-section__title">@Editable(x => x.SectionTitle)</h2>
+    @if (isFeatureIconContent)
+    {
+        @: <div class="feature-icons">
+        }
     <div class="grid-x grid-padding-x">
         @Html.Sitecore().DynamicPlaceholder("cells")
     </div>
-    @if (showPanelBox)
+    @if (showPanelBox || isFeatureIconContent)
     {
         @: </div>
     }
 </section>
+

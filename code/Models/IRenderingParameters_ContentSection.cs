@@ -7,5 +7,8 @@ namespace Sitecore.Feature.Blocks.Models
     {
         [SitecoreField(FieldId = Templates.RenderingParameters_ContentSection.Fields.Content.ShowPanelBox_String)]
         bool ShowPanelBox { get; set; }
+
+        [SitecoreField(FieldId = Templates.RenderingParameters_ContentSection.Fields.Content.IsFeatureIconContent_String)]
+        bool IsFeatureIconContent { get; set; }
     }
 }
