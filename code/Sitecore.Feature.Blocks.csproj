@@ -65,6 +65,7 @@
     <Compile Include="Models\IQuote.cs" />
     <Compile Include="Models\IVideo.cs" />
     <Compile Include="Models\ITitle.cs" />
+    <Compile Include="Renderings.cs" />
     <Compile Include="Templates.cs" />
     <Compile Include="ViewModels\HeroBannerViewModel.cs" />
     <None Include="packages.config" />
